@@ -201,7 +201,7 @@
 									</a>
 									<ul class="list-nav-child">
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="#" class="list-nav-link">
+										  <a href="overview.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -217,11 +217,11 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="about.html" class="list-nav-link">
+										  <a href="#" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
-											<span class="list-nav-label">About</span>
+											<span class="list-nav-label">Dataset</span>
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
@@ -307,42 +307,40 @@
 				<div class="page-content">
 					<section class="project-overview">
 						<div class="container">
-							<hr class="space"/>
 							<h2 class="section-title">Dataset</h2>
+							<p>The main dataset that I would use is the home values section from the <a href="https://www.zillow.com/research/data/" target="_blank">Zillow Research.</a></p>
+							<h3 class="section-title top-space">About the dataset</h3>
+							<h4 class="section-title top-space">Home values</h4>
+							<p>Zillow Home Value Index (ZHVI): A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage). Check out this overview of ZHVI and a deep-dive into its methodology.</p>
+							<p>Among the dataset, I chose the list of ZHVI All Homes (SFR, Condo/Co-op) Time Series ($) by the city category.</p>
+							<p>By the date I checked, this dataset has 27,539 rows and 293 columns and the file size is 63KB.</p>
+
+							<h4 class="section-title top-space">License</h4>
+							<p>This dataset follow the terms of use provided by Zillow its own license, which can be found at <a href="https://www.zillow.com/corp/PublicDataTerms.htm">Public Records Data Terms of Use Definitions</a></p>
+
+							<h4 class="section-title top-space">HOME TYPES</h4>
+							<ul>
+								<li>All Homes: Zillow defines all homes as single-family, condominium and co-operative homes with a county record. Unless specified, all series cover this segment of the housing stock.</li>
+								<li>Condo/Co-op: Condominium and co-operative homes.</li>
+								<li>Multifamily 2+ units: Units in buildings with 5 or more housing units, that are not condominiums or co-ops.</li>
+								<li>Duplex/Triplex: Housing units in buildings with 2 or 3 housing units.</li>
+							</ul>
 							
-
-The main dataset that I would use is the home values section from the Zillow Research.
-
-
-							<h3>About the dataset</h3>
-Home values
-<p>Zillow Home Value Index (ZHVI): A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage). Check out this overview of ZHVI and a deep-dive into its methodology.</p>
-							
-<p>Among the dataset, I chose the list of ZHVI All Homes (SFR, Condo/Co-op) Time Series ($) by the city category.
-	By the date I checked, this dataset has 27,539 rows and 293 columns and the file size is 63KB.</p>
-
-							<h3>License</h3>
-This dataset follow the terms of use provided by Zillow its own license, which can be found at <a href="https://www.zillow.com/corp/PublicDataTerms.htm">Public Records Data Terms of Use
-Definitions</a>
-
-							<h3>HOME TYPES</h3>
-All Homes: Zillow defines all homes as single-family, condominium and co-operative homes with a county record. Unless specified, all series cover this segment of the housing stock.
-Condo/Co-op: Condominium and co-operative homes.
-Multifamily 2+ units: Units in buildings with 5 or more housing units, that are not condominiums or co-ops.
-Duplex/Triplex: Housing units in buildings with 2 or 3 housing units.
-INVENTORY AND SALES
-Median Sale Price ($): Median of the selling price for all homes sold in a given region.
-Median price cut (%): Median of the percentage price reduction for homes with a price reduction during the month.
+							<h4 class="section-title top-space">INVENTORY AND SALES</h4>
+								
+							<ul>
+								<li>Median Sale Price ($): Median of the selling price for all homes sold in a given region.</li>
+								<li>Median price cut (%): Median of the percentage price reduction for homes with a price reduction during the month.
 Foreclosure Resales (%): The percentage of home sales in a given month in which the home was foreclosed upon within the previous year (e.g. sales of bank-owned homes after the bank took possession of a home following a foreclosure).
-Monthly Inventory: The count of unique listings that were active at any time in a given month.
-New Monthly Inventory: The count of unique listings that were newly listed at any time in a given month.
-Median Daily Inventory: Each Wednesday, daily inventory is calculated as the number of currently active listings. These counts are then aggregated into the number reported by taking the median across weekly values.
-Age of Inventory: Each Wednesday, age of inventory is calculated as the median number of days all active listings as of that Wednesday have been current. These medians are then aggregated into the number reported by taking the median across weekly values.
-Days on Zillow: The median days on market of homes sold within a given month, including foreclosure re-sales. The latest data is for one month prior to the current ZHVI (e.g., if the most current month for ZHVI data is January, the most current month for Days on Zillow data will be December).
-Home Sales: The number of homes sold during a given month. Note: ZIP code sales data is not latency adjusted, but is filtered.
-Home Sales, SA: The number of homes sold during the given month, seasonally adjusted using the X-12-Arima method.
-Zillow Home Value Forecast (ZHVF): The ZHVF is the one-year forecast of the ZHVI.
-
+Monthly Inventory: The count of unique listings that were active at any time in a given month.</li>
+								<li>New Monthly Inventory: The count of unique listings that were newly listed at any time in a given month.</li>
+								<li>Median Daily Inventory: Each Wednesday, daily inventory is calculated as the number of currently active listings. These counts are then aggregated into the number reported by taking the median across weekly values.</li>
+								<li>Age of Inventory: Each Wednesday, age of inventory is calculated as the median number of days all active listings as of that Wednesday have been current. These medians are then aggregated into the number reported by taking the median across weekly values.</li>
+								<li>Days on Zillow: The median days on market of homes sold within a given month, including foreclosure re-sales. The latest data is for one month prior to the current ZHVI (e.g., if the most current month for ZHVI data is January, the most current month for Days on Zillow data will be December).</li>
+								<li>Home Sales: The number of homes sold during a given month. Note: ZIP code sales data is not latency adjusted, but is filtered.</li>
+								<li>Home Sales, SA: The number of homes sold during the given month, seasonally adjusted using the X-12-Arima method.
+Zillow Home Value Forecast (ZHVF): The ZHVF is the one-year forecast of the ZHVI.</li>
+							</ul>
 						</div>
 					</section>
 				</div>
