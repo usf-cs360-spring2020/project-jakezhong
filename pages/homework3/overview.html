@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CArvo:400%7CRoboto:300,400,500,700%7CCookie" rel="stylesheet">
+		<link rel="stylesheet" href="../../ui/vendor/css/fontawesome.min.css">
+		<link rel="stylesheet" href="../../ui/vendor/perfect-scrollbar.css">
+		<link rel="stylesheet" href="../../ui/css/style.css">
+		<title>CS360/560 Data Visualization</title>
+	</head>
+	<body>
+		<div class="full-page">
+			<div class="sidebar-container">
+				<aside  class="sidebar sidebar-left sidebar-fixed sidebar-dark">
+					<div class="scroll">
+						<div class="sidebar-header text-white bg-info">
+							<div class="sidebar-brand d-flex justify-content-between align-items-center">
+								<div class="title text-truncate">
+									Data Visulization
+								</div>
+								<div class="logo align-items-center justify-content-around">
+									<i class="material-icons">all_inclusive</i>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar-nav-container">
+							<ul class="list-nav sidebar-nav list-nav-dark list-nav-dark-info">
+								<li class="list-nav-group-title">
+									<span>
+									  HOMEWORK 2
+									</span>
+								</li>
+								<li class="list-nav-item">
+									<a href="../../" class="list-nav-link">
+									  <span class="list-nav-icon">
+										<i class="material-icons">home</i>
+									  </span>
+									  <span class="list-nav-label">Home</span>
+									</a>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 1</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework1/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework1/prototypes.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Tableau Prototypes</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework1/d3-bar.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">D3 Implementations</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework1/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 2</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework2/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework2/scatterplot-matrix.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Scatterplot Matrix</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework2/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 3</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="#" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="implementation.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Implementations</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Midterm</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../midterm/prototype.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Prototype</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../midterm/implementation.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Implementation</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<div class="page">
+				<div class="topbar-container">
+					<nav class="navbar bg-white text-secondary navbar-expand-sm py-0 topbar fixed">
+						<button class="btn btn-flat-secondary btn-sm btn-icon mr-1 no-shadow d-none d-xl-block sidebar-toggle">
+							<i class="material-icons">menu</i>
+						</button>
+						<button class="btn btn-flat-secondary btn-sm btn-icon mr-1 d-xl-none no-shadow sidebar-hide">
+							<i class="material-icons">menu</i>
+						</button>
+						<div class="navbar-text ml-3 d-none d-sm-block">
+							<h5 class="m-0 text-dark">Homework 3</h5>
+						</div>
+						<div class="ml-auto d-sm-flex ml-3">
+							<ul class="navbar-nav">
+								<li class="nav-item no-caret">
+									<a href="../about.html" class="nav-link text-center">About</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="../resources.html" class="nav-link text-center">Resources</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://jakezhong.com" target="_blank" class="nav-link text-center">
+										<i class="far fa-globe"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://github.com/jakezhong" target="_blank" class="nav-link text-center">
+										<i class="fab fa-github"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.linkedin.com/in/jake-zhong/" target="_blank" class="nav-link text-center">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.instagram.com/jakezhong_" target="_blank" class="nav-link text-center">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.facebook.com/jksakura" target="_blank" class="nav-link text-center">
+										<i class="fab fa-facebook"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="page-content">
+					<section class="page-heading">
+						<div class="container">
+							<h1 class="section-title">
+								<p>Homework 3, by <a href="https://jakezhong.com" target="_blank">Jake Zhong</a></p>
+							</h1>
+							<p class="subtitle">
+								For this homework assignment, I have used a Non-Proportional Symbol Map in D3.js (version 5) to visualize data from the "<a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6" target="_blank">SF 311 dataset</a>.
+							</p>
+						</div>
+					</section>
+					<section class="project-overview">
+						<div class="container">
+							<hr class="space"/>
+							<h2 class="section-title">Dataset</h2>
+							<p>This dataset includes cases generally associated with a place or thing (for example parks, streets, or buildings) and created July 1, 2008 or later. Cases generally logged by a user regarding their own needs (for example, property or business tax questions, parking permit requests) are not included. See the Program Link and detailed attachment below for more information.</p>
+							<h3 class="section-title top-space">Dataset Information</h3>
+							<p>I accessed this data on April 9, 2020 and by the date I fetched it, it had the following details.</p>
+							<ul>
+								<li><b>Data Last Updated: </b>April 9, 2020</li>
+								<li><b>Metadata Last Updated: </b>January 30, 2020</li>
+								<li><b>Date Created: </b>October 8, 2011</li>
+								<li><b>Data Provided by: </b>San Francisco 311</li>
+								<li><b>Dataset Owner: </b>AndyM</li>
+								<li><b>Publishing Department: </b>311</li>
+								<li><b>Geographic unit: </b>Latitude/longitude</li>
+								<li><b>Program link: </b><a href="https://support.datasf.org/help/311-case-data-faq" target="_blank">https://support.datasf.org/help/311-case-data-faq</a></li>
+								<li><b>Publishing frequency: </b>Daily</li>
+								<li><b>Data change frequency: </b>Multiple times per hour</li>
+							</ul>
+							<h3 class="section-title top-space">Dataset Analysis</h3>
+							<p>This dataset has 4.14M rows and 20 columns, while each row has 311 cases.</p>
+							<h4 class="section-title top-space">Columns in this dataset</h4>
+							<table class="table table-middle table-material rt-md">
+								<tr>
+									<th>Column Name</th>
+									<th>Description</th>
+									<th>Type</th>
+								</tr>
+								<tr>
+									<td>CaseID</td>
+									<td>The unique ID of the service request created.</td>
+									<td>Number</td>
+								</tr>
+								<tr>
+									<td>Opened</td>
+									<td>The date and time when the service request was made.</td>
+									<td>Date & Time</td>
+								</tr>
+								<tr>
+									<td>Closed</td>
+									<td>The date and time when the service request was closed.</td>
+									<td>Date & Time</td>
+								</tr>
+								<tr>
+									<td>Updated</td>
+									<td>The date and time when the service request was last modified. For requests with status=closed, this will be the date the request was closed.</td>
+									<td>Date & Time</td>
+								</tr>
+								<tr>
+									<td>Status</td>
+									<td>A single-word indicator of the current state of the service request. (Note: GeoReport V2 only permits ‘open’ and ‘closed’).</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Status Notes</td>
+									<td>Explanation of why status was changed to current state or more details on current status than conveyed with status alone.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Responsible Agency</td>
+									<td>The agency responsible for fulfilling or otherwise addressing the service request.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Category</td>
+									<td>The human readable name of the service request type.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Request Type</td>
+									<td>The human readable name of the service request subtype.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Request Details</td>
+									<td>The human readable name of the service request details.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Address</td>
+									<td>Human readable address or description of location.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Street</td>
+									<td>Primary Street of the associated address. Parks may have a park name instead of a street name. Requests not associated with an address will be blank.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Supervisor District</td>
+									<td>San Francisco Supervisor District as defined in 'Supervisor Districts as of April 2012'.</td>
+									<td>Number</td>
+								</tr>
+								<tr>
+									<td>Neighborhood</td>
+									<td>San Francisco Neighborhood as defined in 'SF Find Neighborhoods'.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Police District</td>
+									<td>San Francisco Police District as defined in 'Current Police Districts'.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Latitude</td>
+									<td>Latitude of the location, using the WGS84 projection.</td>
+									<td>Number</td>
+								</tr>
+								<tr>
+									<td>Longitude</td>
+									<td>Longitude of the location, using the WGS84 projection.</td>
+									<td>Number</td>
+								</tr>
+								<tr>
+									<td>Point</td>
+									<td>Combination of Latitude and Longitude for Socrata native maps.</td>
+									<td>Location</td>
+								</tr>
+								<tr>
+									<td>Source</td>
+									<td>Mechanism or path by which the service request was received; typically ‘Phone’, ‘Text/SMS’, ‘Website’, ‘Mobile App’, ‘Twitter’, etc but terms may vary by system.</td>
+									<td>Plain Text</td>
+								</tr>
+								<tr>
+									<td>Media URL</td>
+									<td>A URL to media associated with the request, e.g. an image.</td>
+									<td>Website URL</td>
+								</tr>
+							</table>
+							<h3 class="section-title top-space">Dataset License</h3>
+							<p>This dataset uses the <a href="https://datasf.org/opendata/terms-of-use/#toc8" target="_blank">Public Domain Dedication and License (PDDL).</a></p>
+							<p>Except where otherwise stated in the file containing such Data or on the page from which such Data is accessed, including its metadata, Data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/" target="_blank">http://www.opendatacommons.org/licenses/pddl/1.0/</a></p>
+							<hr class="space"/>
+							
+							<h2 class="section-title top-space">Visualizations</h2>
+							
+							<p>For this project, I have created a Non-Proportional Symbol Map generated by D3 version 5.</p>
+							
+							<p class="buttons">
+								<a class="btn btn-lg btn-teal" href="implementation.html">
+									<span class="icon is-medium">
+									  <i class="fas fa-map-marked-alt"></i>
+									</span>
+									<span>Non-Proportional Symbol Map</span>
+								</a>
+							</p>
+							<hr class="space"/>
+							<h2 class="section-title">Grade</h2>
+
+							<!-- TODO: Change or remove table -->
+							<!-- https://bulma.io/documentation/elements/table/ -->
+							<table class="table is-hoverable is-bordered grades">
+								<thead>
+									<tr>
+									  <th>Letter</th>
+									  <th>Done?</th>
+									  <th>Description</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>D</td>
+							  			<td><i class="btn-flat-danger fas fa-times-circle"></i></td>
+										<td>A visualization prototype in any other tool or language than D3v5.</td>
+									</tr>
+									<tr>
+										<td>C</td>
+							  			<td><i class="btn-flat-success fas fa-check-circle"></i></td>
+										<td>A static visualization in D3v5 with a projected district or neighborhood base map.</td>
+									</tr>
+									<tr>
+										<td>B</td>
+							  			<td><i class="btn-flat-success fas fa-check-circle"></i></td>
+										<td>The C level requirements plus details-on-demand interactivity.</td>
+									</tr>
+									<tr>
+										<td>A</td>
+										<td><i class="btn-flat-success fas fa-check-circle"></i></td>
+										<td>The B level requirements plus either zoom, filter, or brush interactivity.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<section class="feedback">
+						<div class="container">
+							<hr class="space"/>
+							<h2 class="section-title">Feedback from Classmates</h2>
+							<div class="card">
+								<div class="post-container">
+									<div class="comments">
+										<div class="comment" style="border-top: 1px solid #eee;">
+											<div class="media align-items-top px-4 py-3">
+												<div class="post media-body ml-3 py-1">
+													<div class="title" >
+														<h6 class="mt-0 mb-0">Jake Zhong</h6>
+													</div>
+													<div class="post py-2 text-secondary" style="max-width: 80%">
+														<p class="mb-0">Opps, there's no comment yet. Do you want to be the first one to leave feedback?
+														</p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	<script src="../../ui/vendor/jquery.min.js"></script>
+	<script src="../../ui/vendor/popper.min.js"></script>
+	<script src="../../ui/vendor/bootstrap.min.js"></script>
+	<script src="../../ui/vendor/perfect-scrollbar.min.js"></script>
+	<script src="../../ui/vendor/hammer.min.js"></script>
+	<script src="../../ui/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../ui/vendor/color/color.min.js"></script>
+	<script src="../../ui/vendor/fontawesome.min.js"></script>
+	<script src="../../ui/scripts/sidebar.min.js"></script>
+	<script src="../../ui/scripts/collapsible-nav.min.js"></script>
+	<script src="../../ui/scripts/colors.min.js"></script>
+	<script src="../../ui/scripts/settings.min.js"></script>
+	<script src="../../ui/scripts/card.min.js"></script>
+	<script src="../../ui/scripts/script.js"></script>
+	</body>
+</html>

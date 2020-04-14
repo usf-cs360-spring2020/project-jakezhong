@@ -1,383 +1,409 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- TODO: Change title -->
-    <title>Website Template</title>
-
-    <!-- Load Bulma from CDN (consider saving it to repository instead) -->
-    <!-- https://bulma.io/ -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-
-    <!-- Load Font Awesome 5 (free) icons -->
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-  </head>
-
-  <body>
-
-  <!-- Page header -->
-  <!-- https://bulma.io/documentation/layout/hero/ -->
-  <section class="hero is-primary is-bold">
-    <div class="hero-body">
-      <div class="container">
-        <!-- TODO: Change title -->
-        <h1 class="title">Website Title</h1>
-        <!-- TODO: Change subtitle -->
-        <h2 class="subtitle">Website Subtitle</h2>
-      </div>
-    </div>
-  </section>
-  <!-- End page header -->
-
-  <!-- Page navigation -->
-  <!-- https://bulma.io/documentation/components/navbar/ -->
-  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
-    <div class="container">
-      <div class="navbar-brand">
-        <!-- TODO: Change link to repository homepage if needed -->
-        <!-- TODO: Change which navbar-item is-active if needed -->
-        <a class="navbar-item is-active" href="index.html">
-          <span class="icon"><i class="fas fa-home"></i></span>
-          <span>Home</span>
-        </a>
-
-        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="main-menu">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="main-menu" class="navbar-menu has-text-weight-medium">
-        <!-- Left navbar items -->
-        <div class="navbar-start">
-          <a class="navbar-item" href="#data" title="Data">
-            <span class="icon"><i class="fas fa-table"></i></span>
-            <span>Data</span>
-          </a>
-
-          <!-- TODO: Modify or remove dropdown -->
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link">
-              Visualizations
-            </a>
-
-            <div class="navbar-dropdown">
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-line"></i></span>
-                <span>Line Chart</span>
-              </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-area"></i></span>
-                <span>Area Chart</span>
-              </a>
-
-              <hr class="navbar-divider">
-
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-bar"></i></span>
-                <span>Bar Chart</span>
-              </a>
-              <a class="navbar-item">
-                <span class="icon"><i class="fas fa-chart-pie"></i></span>
-                <span>Pie Chart</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right navbar items -->
-        <div class="navbar-end">
-          <!-- TODO: Update as needed -->
-          <a class="navbar-item" href="#about" title="About">
-            <span class="icon"><i class="fas fa-tasks"></i></span>
-            <span>Grade</span>
-          </a>
-
-          <a class="navbar-item" href="#about" title="About">
-            <span class="icon"><i class="fas fa-info-circle"></i></span>
-            <span>About</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- End page navigation -->
-
-  <section class="section">
-    <div class="container">
-      <!-- Begin page content -->
-      <div class="content">
-        <h1 class="title">
-          <!-- TODO: Change page title -->
-          Page Title
-        </h1>
-        <p class="subtitle">
-          <!-- TODO: Change page subtitle -->
-          Page Subtitle
-        </p>
-
-        <p>This would be an excellent place to describe what this page is for, what to find in different sections, describe any motivation or theme behind your visualizations, and so on.</p>
-
-        <p>You should not use this template unless you intend to customize it. Make it your own. Keep in mind this simple template is over 300 lines! You can see other examples of websites using Bulma at their showcase: <a href="https://bulma.io/expo/">bulma.io/expo/</a>.</p>
-
-        <h2 id="data">Data</h2>
-
-        <p>Include some detailed information about the dataset here. You should <a href="#">add a link</a> to the original dataset. You might also want to quote the license:</p>
-
-        <blockquote>
-          <p>
-            "This data is made available under the Public Domain Dedication and License v1.0 whose full text can be found at: <a href="http://www.opendatacommons.org/licenses/pddl/1.0/">www.opendatacommons.org/licenses/pddl/1.0/</a>"
-          </p>
-          <cite>Put a citation here, possibly link to the dataset license information directly.</cite>
-        </blockquote>
-
-        <p>In addition to including a link to the source and license, you should describe the data. You might want a list of some sort to enumerate the different types of columns:</p>
-
-        <ol>
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-
-          <li><strong>Column Name:</strong> Give a description of the column, including its type and possible range of values.</li>
-        </ol>
-
-        <p>This will of course differ depending on the assignment and data.</p>
-
-        <h3 id="wrangling">Wrangling</h3>
-
-        <p>Perhaps you had to do some data wrangling to the original dataset to prepare it for visualization. This would be a great place to discuss some of that wrangling.
-
-        <pre>
-You can even put code into these pre blocks.
-  It will preserve whitespace.
-    That is helpful for formatted code.
-        </pre>
-
-        <p>You can alternatively embed a Gist if you want. There is an "embed" button on <a href="https://gist.github.com/octocat/6cad326836d38bd3a7ae">the Gist page</a> and results in something like this:</p>
-
-        <script src="https://gist.github.com/octocat/6cad326836d38bd3a7ae.js"></script>
-
-        <h2 id="visualizations">Visualizations</h2>
-
-        <p>Ideally not everything would be on a single page like this example. Instead, you might want to put each section in its own webpage. You would need to carefully replicate the page template (with the header, navbar, and footer) and make the necessary updates. For example, you want the "About" navbar item to be considered active on an "About" web page.</p>
-
-        <p>For now this is just a demo. The buttons below do not go anywhere, but can be easily changed to link to different visualization pages.</p>
-
-        <p class="buttons">
-          <a class="button is-large is-success" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-line"></i>
-            </span>
-            <span>Line Chart</span>
-          </a>
-
-          <a class="button is-large is-primary" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-area"></i>
-            </span>
-            <span>Area Chart</span>
-          </a>
-
-          <a class="button is-large is-info" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-bar"></i>
-            </span>
-            <span>Bar Chart</span>
-          </a>
-
-          <a class="button is-large is-link" href="#">
-            <span class="icon is-medium">
-              <i class="fas fa-chart-pie"></i>
-            </span>
-            <span>Pie Chart</span>
-          </a>
-        </p>
-
-        <!-- https://github.com/vega/vega-embed#basic-example -->
-        <p>It is possible to embed some visualizations directly here too. Here is <a href="https://github.com/vega/vega-embed#basic-example">an example</a> using Vega-Lite:</p>
-
-        <script src="https://cdn.jsdelivr.net/npm/vega@5.9.0"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.2"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.2.1"></script>
-
-        <div id="vis"></div>
-
-        <script type="text/javascript">
-        var spec = "https://raw.githubusercontent.com/vega/vega/master/docs/examples/bar-chart.vg.json";
-        vegaEmbed('#vis', spec).then(function(result) {
-          // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-        }).catch(console.error);
-        </script>
-
-        <h4>Instructions</h4>
-
-        <p>You will likely need to include instructions on how to interpet and use the visualization. In the case above, if you click the three dots <i class="fas fa-ellipsis-h has-text-grey-light	"></i> above it will open a menu where you can either save the visualization to a SVG or PNG, or alternatively open it up in the online Vega Editor.</p>
-
-        <h4>Discussion</h4>
-
-        <p>You may also need other sections, like a discussion section, per-visualization section on data wrangling, and others. Because of the extra content and code visualizations take, it might be worthwhile to break up your pages into one home page and then one page per visualization.</p>
-
-        <span class="heading">Acknowledgements</span>
-
-        <p>
-          <a href="#">Link to insiration</a><br/>
-          <a href="#">Link to StackOverflow snippet</a>
-        </p>
-
-        <p class="is-6">
-          <em>Thanks to Person Name for their suggestion to do something with the visualization.</em>
-        </p>
-
-        <h2 id="grade">Grade</h2>
-
-        <!-- TODO: Remove custom style if no longer needed -->
-        <style>
-          table.grades tbody tr td:nth-child(1),
-          table.grades tbody tr td:nth-child(2) {
-            text-align: center;
-          }
-        </style>
-
-        <!-- TODO: Change or remove table -->
-        <!-- https://bulma.io/documentation/elements/table/ -->
-        <table class="table is-hoverable is-bordered grades">
-          <thead>
-            <tr>
-              <th>Letter</th>
-              <th>Done?</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>D</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied. Exactly how this section should look will depend on the assignment in question. There is no requirement for formatting in this way. This is just an example of what a table element might look like for this informaiton.</td>
-            </tr>
-
-            <tr>
-              <td>C</td>
-              <td><i class="has-text-success fas fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
-
-            <tr>
-              <td>B</td>
-              <td><i class="has-text-warning far fa-check-circle"></i></td>
-              <td>Discussion of how this grade level was satisfied.</td>
-            </tr>
-
-            <tr>
-              <td>A</td>
-              <td><i class="has-text-danger fas fa-times-circle"></i></td>
-              <td>Discussion of how this grade level was not satisfied.</td>
-            </tr>
-          </tbody>
-
-        </table>
-
-        <h2 id="about">About</h2>
-
-        <!-- Profile box -->
-        <!-- https://bulma.io/documentation/layout/media-object/ -->
-        <article class="media">
-          <!-- TODO: Replace with profile photo -->
-          <figure class="media-left">
-            <p class="image is-128x128"><img class="is-rounded" src="profile.png"></p>
-          </figure>
-
-          <div class="media-content">
-            <div class="content">
-              <!-- TODO: Replace with contact information -->
-              <p>
-                <strong>Full Name</strong><br/>
-                CS Major, <a href="https://www.usfca.edu/">University of San Francisco</a><br/>
-                <em>Expected Graduation: 20??</em><br/>
-                <i class="fas fa-envelope"></i> <a href="mailto:username@dons.usfca.edu">username@dons.usfca.edu</a>
-              </p>
-
-              <!-- TODO: Replace with brief biography -->
-              <p>
-                Here is a brief bio about yourself. A good rule of thumb is to include at least one technical tidbit (favorite area or course within computer science), and one fun tidbit (such as loving dogs).
-              </p>
-
-              <!-- TODO: Replace or remove tags -->
-              <!-- https://bulma.io/documentation/elements/tag/ -->
-              <div class="heading">Skills</div>
-
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">C</span>
-                <span class="tag">Java</span>
-                <span class="tag">JavaScript</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">SVG</span>
-              </div>
-            </div>
-          </div>
-        </article>
-        <!-- End profile box -->
-
-      </div>
-      <!-- End page content -->
-    </div>
-  </section>
-
-  <!-- Page footer -->
-  <!-- https://bulma.io/documentation/layout/footer/ -->
-  <footer class="footer">
-    <div class="content has-text-centered is-size-7">
-      <p>
-        <a href="#top">
-          <span class="fas fa-arrow-up"></span>
-          <span class="has-text-weight-medium">Back to Top</span>
-        </a>
-      </p>
-
-      <p>
-        <!-- TODO: Change to link to your Github repository -->
-        <a href="https://github.com/usf-cs360-spring2020/template-bulma" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
-          <i class="fab fa-github-alt"></i>&nbsp;<strong>Github</strong>
-        </a>
-
-        <a href="https://fontawesome.com/" class="button is-small" style="padding-left: 1em; padding-right: 1em;">
-          <i class="fab fa-font-awesome"></i>&nbsp;<strong>FontAwesome</strong>
-        </a>
-
-        <a href="https://bulma.io" class="button is-small">
-          <img src="https://bulma.io/images/made-with-bulma--semiblack.png" alt="Made with Bulma" width="128" height="24">
-        </a>
-      </p>
-    </div>
-  </footer>
-  <!-- End page footer -->
-
-  <!-- Mobile menu responsiveness -->
-  <!-- https://bulma.io/documentation/components/navbar/ -->
-  <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-    if ($navbarBurgers.length > 0) {
-      $navbarBurgers.forEach( el => {
-        el.addEventListener('click', () => {
-          const target = el.dataset.target;
-          const $target = document.getElementById(target);
-          el.classList.toggle('is-active');
-          $target.classList.toggle('is-active');
-        });
-      });
-    }
-  });
-  </script>
-  <!-- End mobile menu responsiveness -->
-  </body>
-
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono%7CArvo:400%7CRoboto:300,400,500,700%7CCookie" rel="stylesheet">
+		<link rel="stylesheet" href="ui/vendor/css/fontawesome.min.css">
+		<link rel="stylesheet" href="ui/vendor/perfect-scrollbar.css">
+		<link rel="stylesheet" href="ui/css/style.css">
+		<title>CS360/560 Data Visualization</title>
+	</head>
+	<body>
+		<div class="full-page">
+			<div class="sidebar-container">
+				<aside  class="sidebar sidebar-left sidebar-fixed sidebar-dark">
+					<div class="scroll">
+						<div class="sidebar-header text-white bg-info">
+							<div class="sidebar-brand d-flex justify-content-between align-items-center">
+								<div class="title text-truncate">
+									Data Visulization
+								</div>
+								<div class="logo align-items-center justify-content-around">
+									<i class="material-icons">all_inclusive</i>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar-nav-container">
+							<ul class="list-nav sidebar-nav list-nav-dark list-nav-dark-info">
+								<li class="list-nav-group-title">
+									<span>
+									  HOME
+									</span>
+								</li>
+								<li class="list-nav-item">
+									<a href="../../" class="list-nav-link">
+									  <span class="list-nav-icon">
+										<i class="material-icons">home</i>
+									  </span>
+									  <span class="list-nav-label">Home</span>
+									</a>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 1</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework1/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework1/prototypes.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Tableau Prototypes</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework1/d3-bar.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">D3 Implementations</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework1/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 2</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework2/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework2/scatterplot-matrix.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Scatterplot Matrix</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework2/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Homework 3</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework3/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework3/implementation.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Implementations</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/homework3/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
+									  	<span class="list-nav-label">Midterm</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/midterm/prototype.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Prototype</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="pages/midterm/implementation.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Implementation</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<div class="page">
+				<div class="topbar-container">
+					<nav class="navbar bg-white text-secondary navbar-expand-sm py-0 topbar fixed">
+						<button class="btn btn-flat-secondary btn-sm btn-icon mr-1 no-shadow d-none d-xl-block sidebar-toggle">
+							<i class="material-icons">menu</i>
+						</button>
+						<button class="btn btn-flat-secondary btn-sm btn-icon mr-1 d-xl-none no-shadow sidebar-hide">
+							<i class="material-icons">menu</i>
+						</button>
+
+						<div class="navbar-text ml-3 d-none d-sm-block">
+							<h5 class="m-0 text-dark">Home</h5>
+						</div>
+
+						<div class="ml-auto d-sm-flex ml-3">
+							<ul class="navbar-nav">
+								<li class="nav-item no-caret">
+									<a href="pages/about.html" class="nav-link text-center">About</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="pages/resources.html" class="nav-link text-center">Resources</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://jakezhong.com" target="_blank" class="nav-link text-center">
+										<i class="far fa-globe"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://github.com/jakezhong" target="_blank" class="nav-link text-center">
+										<i class="fab fa-github"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.linkedin.com/in/jake-zhong/" target="_blank" class="nav-link text-center">
+										<i class="fab fa-linkedin-in"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.instagram.com/jakezhong_" target="_blank" class="nav-link text-center">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</li>
+								<li class="nav-item no-caret">
+									<a href="https://www.facebook.com/jksakura" target="_blank" class="nav-link text-center">
+										<i class="fab fa-facebook"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+				<div class="page-content">
+					<section class="page-heading">
+						<div class="container">
+							<h1 class="title">
+								<p>CS360/560 Data Visualization, by <a href="https://jakezhong.com" target="_blank">Jake Zhong</a></p>
+							</h1>
+							<p class="subtitle">
+							  <!-- TODO: Change page subtitle -->
+							  This is a website for my CS360/560 Data Visualization course materials, including projects, homework and so on. I hope you can find what you need here, feel free to reach out to me at <a href="mailto:jzhong1@dons.ussca.edu">jzhong1@dons.ussca.edu</a> if you have any question.
+							</p>
+						</div>
+					</section>
+					<section class="project-list">
+						<div class="container">
+							<hr class="space" />
+							<h2 class="section-title">Project List</h2>
+							<div class="card">
+								<div class="card-header">
+									<h5>All Projects</h5>
+								</div>
+								<div class="card-body px-0">
+									<table class="table table-middle table-material rt-md">
+										<thead class="rt-table-hide">
+											<tr>
+												<th>Project Title</th>
+												<th>Due Date</th>
+												<th>Progress</th>
+											</tr>
+										</thead>
+										<tbody>
+										  <tr>
+											<td class="rt-header"><a href="pages/homework1/overview.html">Homework 1</a></td>
+											<td class="rt-full">
+											  <i class="material-icons text-secondary" style="vertical-align:middle; line-height: 1">event</i>
+												Feb 14 2020<span class="text-secondary ml-1 d-none rt-table-inline">Due Date</span>
+											</td>
+											<td class="rt-full" style="width: 15rem">
+												<div class="progress progress-thin">
+													<div class="progress-bar bg-success" style="width:100%"></div>
+												</div>
+											</td>
+										  </tr>
+										  <tr>
+											<td class="rt-header"><a href="pages/homework2/overview.html">Homework 2</a></td>
+											<td class="rt-full">
+											  <i class="material-icons text-secondary" style="vertical-align:middle; line-height: 1">event</i>
+												Feb 28 2020<span class="text-secondary ml-1 d-none rt-table-inline">Due Date</span>
+											</td>
+											<td class="rt-full" style="width: 15rem">
+												<div class="progress progress-thin">
+													<div class="progress-bar bg-success" style="width:100%"></div>
+												</div>
+											</td>
+										  </tr>
+										  <tr>
+											<td class="rt-header"><a href="pages/homework3/overview.html">Homework 3</a></td>
+											<td class="rt-full">
+											  <i class="material-icons text-secondary" style="vertical-align:middle; line-height: 1">event</i>
+												Apr 10 2020<span class="text-secondary ml-1 d-none rt-table-inline">Due Date</span>
+											</td>
+											<td class="rt-full" style="width: 15rem">
+												<div class="progress progress-thin">
+													<div class="progress-bar bg-success" style="width:100%"></div>
+												</div>
+											</td>
+										  </tr>
+										  <tr>
+											<td class="rt-header"><a href="pages/midterm/prototype.html">Midterm Project</a></td>
+											<td class="rt-full">
+											  <i class="material-icons text-secondary" style="vertical-align:middle; line-height: 1">event</i>
+												Mar 20 2020<span class="text-secondary ml-1 d-none rt-table-inline">Due Date</span>
+											</td>
+											<td class="rt-full" style="width: 15rem">
+												<div class="progress progress-thin">
+													<div class="progress-bar bg-success" style="width:100%"></div>
+												</div>
+											</td>
+										  </tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</section>
+				
+					<section class="profile">
+						<div class="container">
+							<hr class="space" />
+							<h2 class="section-title">About Author</h2>
+							<div class="card">
+								<div class="row">
+									<div class="col-lg-5 col-12">
+										<div class="card-body p-0">
+											<div class="cover" style="max-height:15rem; overflow: hidden;">
+												<img src="ui/images/profile-cover.png" alt="Profile Cover" class="img-fluid">
+											</div>
+											<div class="photo text-center pull-up-lg">
+												<img src="ui/images/profile.jpg" alt="Profile Photo" class="img-thumb-xxl">
+											</div>
+											<div class="title text-center py-4">
+												<h4 class="name">Jake Zhong</h4>
+												<p class="text-secondary">MSCS Student at USF</p>
+												<a href="mailto:jzhong1@dons.usfca.edu">
+													<button class="btn btn-outline-info">
+													Contact
+													</button>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-7 col-12">
+										<div class="card-body px-0 py-2">
+											<h4 class="section-title top-space">About Me</h4>
+											<p class="mb-4 text-secondary">
+												<b>Major:</b> Computer Science Bridge<br/>
+												<b>Expected graduation year:</b></b> 2022<br/>
+												<i class="fas fa-envelope"></i> </b> <a href="mailto:jzhong1@dons.usfca.edu">jzhong1@dons.usfca.edu</a>
+											</p>
+											<p class="mb-4 text-secondary">Hi there! This is Jake Zhong. I am from Guangdong China and I am currently a Computer Science student at University of San Francisco. I've lived and worked in Boston for 5 years.</p>
+											<p class="mb-4 text-secondary">I love programming, and my dream is to make the world a better place by coding. I like things relavant to web development, such as website, web game and web application</p>
+											<h6 class="section-title top-space">Skills</h6>
+											<div class="tags">
+												<span class="tag btn-sm btn-dark">Python</span>
+												<span class="tag btn-sm btn-dark">C</span>
+												<span class="tag btn-sm btn-dark">Java</span>
+												<span class="tag btn-sm btn-dark">JavaScript</span>
+												<span class="tag btn-sm btn-dark">HTML/CSS</span>
+												<span class="tag btn-sm btn-dark">Vuejs</span>
+												<span class="tag btn-sm btn-dark">Reactjs</span>
+											</div>
+											<div class="tab-content">
+												<div class="tab-pane show active" id="pabout" role="tabpanel" aria-labelledby="about-tab">
+													<div class="py-4 px-6">
+													</div>
+												</div>
+												<div class="tab-pane" id="pcontact" role="tabpanel" aria-labelledby="pcontact-tab">
+													<div class="py-4 px-6">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>				
+					</section>
+		<script src="ui/vendor/jquery.min.js"></script>
+		<script src="ui/vendor/popper.min.js"></script>
+		<script src="ui/vendor/bootstrap.min.js"></script>
+		<script src="ui/vendor/perfect-scrollbar.min.js"></script>
+		<script src="ui/vendor/hammer.min.js"></script>
+		<script src="ui/vendor/jquery-ui/jquery-ui.min.js"></script>
+		<script src="ui/vendor/color/color.min.js"></script>
+		<script src="ui/vendor/fontawesome.min.js"></script>
+		<script src="ui/scripts/sidebar.min.js"></script>
+		<script src="ui/scripts/collapsible-nav.min.js"></script>
+		<script src="ui/scripts/colors.min.js"></script>
+		<script src="ui/scripts/settings.min.js"></script>
+		<script src="ui/scripts/card.min.js"></script>
+		<script src="ui/scripts/script.js"></script>
+	</body>
 </html>
