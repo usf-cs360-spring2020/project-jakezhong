@@ -9,13 +9,7 @@
 		<link rel="stylesheet" href="../../ui/vendor/css/fontawesome.min.css">
 		<link rel="stylesheet" href="../../ui/vendor/perfect-scrollbar.css">
 		<link rel="stylesheet" href="../../ui/css/style.css">
-		<script src="../../ui/vendor/d3.v5.min.js"></script>
 		<title>CS360/560 Data Visualization</title>
-		<style>
-			.bar {
-				fill: steelblue;
-			}
-		</style>
 	</head>
 	<body>
 		<div class="full-page">
@@ -32,11 +26,12 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="sidebar-nav-container">
 							<ul class="list-nav sidebar-nav list-nav-dark list-nav-dark-info">
 								<li class="list-nav-group-title">
 									<span>
-									  HOMEWORK 1
+									  FINAL PROJECT
 									</span>
 								</li>
 								<li class="list-nav-item">
@@ -67,7 +62,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="prototypes.html" class="list-nav-link">
+										  <a href="#" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -75,7 +70,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="#" class="list-nav-link">
+										  <a href="d3-bar.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -207,7 +202,7 @@
 									</a>
 									<ul class="list-nav-child">
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/overview.html" class="list-nav-link">
+										  <a href="overview.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -215,7 +210,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/prototypes.html" class="list-nav-link">
+										  <a href="#" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -223,7 +218,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/implementation.html" class="list-nav-link">
+										  <a href="implementation.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -231,7 +226,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/requirements.html" class="list-nav-link">
+										  <a href="requirements.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -256,7 +251,7 @@
 						</button>
 
 						<div class="navbar-text ml-3 d-none d-sm-block">
-							<h5 class="m-0 text-dark">Homework 1</h5>
+							<h5 class="m-0 text-dark">Final Project</h5>
 						</div>
 
 						<div class="ml-auto d-sm-flex ml-3">
@@ -301,30 +296,17 @@
 						<div class="container">
 						  	<!-- Begin page content -->
 						  	<div class="content">
-								<h2 class="section-title">All D3 Projects</h2>
-								
-								<p class="buttons">
-								  	<a class="btn btn-lg btn-cyan" href="d3-bar.html">
-										<span class="icon is-medium">
-										  <i class="fas fa-chart-bar"></i>
-										</span>
-										<span>Bar Chart</span>
-								  	</a>
-								  	<a class="btn btn-lg btn-pink" href="d3-pie.html">
-										<span class="icon is-medium">
-										  <i class="fas fa-chart-pie"></i>
-										</span>
-										<span>Pie Chart</span>
-								  	</a>
-								</p>
 								<hr class="space"/>
-								<h3 class="section-title">Discussion</h3>
-								<p>Sum of Passenger Count for each GEO Region. Passenger count is encoded by the length of the bar, so longer bar represent higher passenger count.</p>
-								<p>In terms of the passenger count, US definitely has a dominant amount, which is about 5 times as big as the second region(Asia). Also, from all regions.</p>
+								<h2 class="section-title">Prototype</h2>
+								<h4>Average Price of Feb 2020 for each Region Name. The view is filtered on Region Name, which keeps 43 of 63 members.</h4>
+								<p>
+								For starter, I created a basic prototype based on the average price of different cities in the bay area in Feb 2020. Because the original dataset covers all data from the United States, so I did some data wrangling by filtering the data to focus on the cities only in the bay area, which are 63 cities in total and I got rid of 20 of them that showed no data in Feb 2020.</p>
 								<div class="card work-images">
 									<div class="card-body card-body-p">
 									  	<div class="chart-container">
-											<div class="d3-bar-chart"><svg width="960" height="500"></svg></div>
+											<figure>
+												<img src="../../assets/img/final/prototype_bar.png" alt="passenger-count-activity-period">
+											</figure>
 									  	</div>
 									</div>
 								</div>
@@ -335,77 +317,19 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			var svg = d3.select(".d3-bar-chart svg"),
-				margin = 200,
-				width = svg.attr("width") - margin,
-				height = svg.attr("height") - margin;
-
-			svg.append("text")
-			   .attr("transform", "translate(100,0)")
-			   .attr("x", 50)
-			   .attr("y", 50)
-			   .text("Sum of Passenger Count for each GEO Region");
-
-			var xScale = d3.scaleBand().range([0, width]).padding(0.4),
-				yScale = d3.scaleLinear().range([height, 0]);
-
-			var g = svg.append("g")
-					   .attr("transform", "translate(" + 100 + "," + 100 + ")");
-
-			var dataset = d3.csv("data/bar.csv");
-
-			dataset.then(function(data) {
-
-				xScale.domain(data.map(function(d) { return d.geo_region; }));
-				yScale.domain([0, d3.max(data, function(d) { return d.passenger_count/1000000; })]);
-
-				g.append("g")
-				 .attr("transform", "translate(0," + height + ")")
-				 .call(d3.axisBottom(xScale))
-				 .append("text")
-				 .attr("y", height - 250)
-				 .attr("x", width - 100)
-				 .attr("text-anchor", "end")
-				 .attr("stroke", "black")
-				 .text("GEO Region");
-
-				g.append("g")
-				 .call(d3.axisLeft(yScale).tickFormat(function(d){
-					 return d + "M";
-				 })
-				 .ticks(10))
-				 .append("text")
-				 .attr("transform", "rotate(-90)")
-				 .attr("y", 6)
-				 .attr("dy", "-5.1em")
-				 .attr("text-anchor", "end")
-				 .attr("stroke", "black")
-				 .text("Passenger Count");
-
-				g.selectAll(".bar")
-				 .data(data)
-				 .enter().append("rect")
-				 .attr("class", "bar")
-				 .attr("x", function(d) { return xScale(d.geo_region); })
-				 .attr("y", function(d) { return yScale(d.passenger_count/1000000); })
-				 .attr("width", xScale.bandwidth())
-				 .attr("height", function(d) { return height - yScale(d.passenger_count/1000000); });
-			});
-		</script>
-		<script src="../../ui/vendor/jquery.min.js"></script>
-		<script src="../../ui/vendor/popper.min.js"></script>
-		<script src="../../ui/vendor/bootstrap.min.js"></script>
-		<script src="../../ui/vendor/perfect-scrollbar.min.js"></script>
-		<script src="../../ui/vendor/hammer.min.js"></script>
-		<script src="../../ui/vendor/jquery-ui/jquery-ui.min.js"></script>
-		<script src="../../ui/vendor/color/color.min.js"></script>
-		<script src="../../ui/vendor/fontawesome.min.js"></script>
-		<script src="../../ui/scripts/sidebar.min.js"></script>
-		<script src="../../ui/scripts/collapsible-nav.min.js"></script>
-		<script src="../../ui/scripts/colors.min.js"></script>
-		<script src="../../ui/scripts/settings.min.js"></script>
-		<script src="../../ui/scripts/card.min.js"></script>
-		<script src="../../ui/scripts/script.js"></script>
+	<script src="../../ui/vendor/jquery.min.js"></script>
+	<script src="../../ui/vendor/popper.min.js"></script>
+	<script src="../../ui/vendor/bootstrap.min.js"></script>
+	<script src="../../ui/vendor/perfect-scrollbar.min.js"></script>
+	<script src="../../ui/vendor/hammer.min.js"></script>
+	<script src="../../ui/vendor/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../../ui/vendor/color/color.min.js"></script>
+	<script src="../../ui/vendor/fontawesome.min.js"></script>
+	<script src="../../ui/scripts/sidebar.min.js"></script>
+	<script src="../../ui/scripts/collapsible-nav.min.js"></script>
+	<script src="../../ui/scripts/colors.min.js"></script>
+	<script src="../../ui/scripts/settings.min.js"></script>
+	<script src="../../ui/scripts/card.min.js"></script>
+	<script src="../../ui/scripts/script.js"></script>
 	</body>
 </html>
