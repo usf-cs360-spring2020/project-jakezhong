@@ -135,7 +135,7 @@
 									</a>
 									<ul class="list-nav-child">
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="overview.html" class="list-nav-link">
+										  <a href="../homework3/overview.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -143,7 +143,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="implementation.html" class="list-nav-link">
+										  <a href="../homework3/implementation.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -151,7 +151,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="requirements.html" class="list-nav-link">
+										  <a href="../homework3/requirements.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -172,7 +172,7 @@
 									</a>
 									<ul class="list-nav-child">
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../homework4/overview.html" class="list-nav-link">
+										  <a href="overview.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -180,7 +180,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../homework4/implementation.html" class="list-nav-link">
+										  <a href="implementation.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -188,7 +188,7 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../homework4/requirements.html" class="list-nav-link">
+										  <a href="requirements.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -356,44 +356,32 @@
 						<div class="container">
 						  	<!-- Begin page content -->
 							<div class="content">
-								<h1 class="section-title">Homework 3 Requirements</p></h1>
+								<h1 class="section-title">Homework 4 Requirements</p></h1>
 								<hr class="space">
-								<div class="description user_content student-version enhanced"><p>For this homework assignment, you must visualize data from the SF 311 Cases dataset using a geospatial data visualization technique in D3 version 5. The techniques allowed for this homework include: non-proportional symbol map, proportional symbol map, choropleth map, or hexbin map.</p>
-<p><small>ASSOCIATED ASSIGNMENTS</small><br><a title="Homework 3 Functionality" href="/courses/1590235/assignments/6908016" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908016" data-api-returntype="Assignment">Homework 3 Functionality</a><br><a title="Homework 3 Peer Review Submission" href="/courses/1590235/assignments/6908008" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908008" data-api-returntype="Assignment">Homework 3 Peer Review Submission</a><br><a title="Homework 3 Peer Review Feedback" href="/courses/1590235/assignments/6908017" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908017" data-api-returntype="Assignment">Homework 3 Peer Review Feedback</a></p>
+							<div class="description user_content student-version enhanced"><p>For this homework assignment, you must visualize the data from the Fire Department Calls for Service dataset using hierarchical data visualization techniques in D3 version 5. You must perform some data wrangling for this assignment to transform the data into a hierarchical format.</p>
+<p><small>ASSOCIATED ASSIGNMENTS</small><br><a title="Homework 4 Functionality" href="/courses/1590235/assignments/6908019" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908019" data-api-returntype="Assignment">Homework 4 Functionality</a><br><a title="Homework 4 Peer Review Submission" href="/courses/1590235/assignments/6908018" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908018" data-api-returntype="Assignment">Homework 4 Peer Review Submission</a><br><a title="Homework 4 Peer Review Feedback" href="/courses/1590235/assignments/6908020" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908020" data-api-returntype="Assignment">Homework 4 Peer Review Feedback</a></p>
 <hr>
 <h2>1. Dataset</h2>
-<p>You must visualize a filtered view of the SF 311 dataset available at:</p>
-<p><a href="https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
-<p>Be sure to read the <a href="https://support.datasf.org/help/311-case-data-faq" class="external" target="_blank" rel="noreferrer noopener"><span>311 case data FAQ</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> before visualizing the data .</p>
-<p>The visualizations must use the geospatial data columns (latitude and longitude for symbol and hexbin maps, district or neighborhood for choropleths).</p>
-<p>You may show the raw count of cases or attempt to calculate a <a href="https://github.com/d3/d3-geo#path_area" class="external" target="_blank" rel="noreferrer noopener"><span>case per sq ft</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> ratio instead. Either way, the data being visualized should be clearly indicated.</p>
-<p>You are also encouraged to explore using the many categorical columns or the time series columns (such as calculating the time between opened and closed) available in the dataset.</p>
-<h3>1.1 Filtering</h3>
-<p>Filter the dataset to show cases that were OPENED in the month of February 2020 only. Then choose a CATEGORY that has at least 100 cases associated with it. For example, this includes "Street and Sidewalk Cleaning" (approximately 21k cases) and "Residential Building Request" (approximately 100 cases).</p>
-<p><em>Optional: While some "General Request" subcategories have few cases (e.g. "General Request - ANIMAL CARE CONTROL" has approximately 60 cases), you can treat any of the categories that start with "General Request" as one larger category.</em></p>
-<h3>1.2 Base Map</h3>
-<p><strong>Decide on a map projection to use that is appropriate for their data and visualization technique.</strong></p>
-<p>Show district or neighborhood boundaries (or a mix) no matter which projection or visualization technique you choose. The options include:</p>
+<p>You must visualize the SF 311 dataset available at:</p>
+<p><a href="https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
+<p>However, the dataset is not hierarchical. You must decide how to form a hierarchy from this dataset. See below for details.</p>
+<h3>1.1 Hierarchy</h3>
+<p>You must form a hierarchy from this dataset such that:</p>
 <ul>
 <li>
-<p>Current Supervisor Districts: <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Current-Supervisor-Districts/8nkz-x4ny" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/Geographic-Locations-and-Boundaries/Current-Supervisor-Districts/8nkz-x4ny</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>&nbsp;</p>
+<p>The hierarchy must have height 3 or higher (i.e. at least 3 levels, including root and leaves).</p>
 </li>
 <li>
-<p>Current Police Districts: <a href="https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/Public-Safety/Current-Police-Districts/wkhw-cjsf</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>&nbsp;</p>
-</li>
-<li>
-<p>SF Find Neighborhoods: <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/SF-Find-Neighborhoods/pty2-tcw4" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/Geographic-Locations-and-Boundaries/SF-Find-Neighborhoods/pty2-tcw4</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
+<p>Each leaf node must have an attribute associated with it.</p>
 </li>
 </ul>
-<p>If you want to show other geographic context (such as streets), you can find some additional options at:</p>
-<p><a href="https://data.sfgov.org/browse?category=Geographic+Locations+and+Boundaries" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/browse?category=Geographic+Locations+and+Boundaries</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
-<p>All the boundary files may be exported in GeoJSON format.</p>
-<h3>1.3 Additional Resources</h3>
-<p>There is a basic non-proportional symbol map visualization of this dataset available at:</p>
-<p><a title="Short link, opens in new window" href="https://data.sfgov.org/d/ky99-f5iy" target="_blank" class="external" rel="noreferrer noopener"><span>https://data.sfgov.org/d/ky99-f5iy</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
-<p>It is very slow and should be viewed with a filter applied. There is also a dashboard overview, which may be helpful in determining the filter you want to apply:</p>
-<p><a href="https://data.sfgov.org/City-Infrastructure/311-Cases-Dashboard/tyzs-6f38" class="external" target="_blank" rel="noreferrer noopener"><span>https://data.sfgov.org/City-Infrastructure/311-Cases-Dashboard/tyzs-6f38</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></p>
-<p>The dashboard also includes an example of a choropleth using this data.</p>
+<p>This hierarchy can be formed using dates, regions, and/or categories (call type group, call types, etc.).</p>
+<p><em>It is possible to create a hierarchy by region only, but it is difficult.</em> You can try Division » Battalion » Station (<a href="https://sf-fire.org/fire-station-locations" class="external" target="_blank" rel="noreferrer noopener"><span>see breakdown</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>). Or, you can try <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Supervisor-District-to-ZIP-Code-Crosswalk/v22h-ujnv" class="external" target="_blank" rel="noreferrer noopener"><span>Supervisor District » Zip Code</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, but some zip codes overlap districts. The dataset does use <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods/p5b7-5n3h" class="external" target="_blank" rel="noreferrer noopener"><span>Analysis Neighborhoods</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, which can be <a href="https://data.sfgov.org/Geographic-Locations-and-Boundaries/Analysis-Neighborhoods-2010-census-tracts-assigned/bwbp-wk3r" class="external" target="_blank" rel="noreferrer noopener"><span>mapped to census tracks</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> as well.</p>
+<p>It might be interesting to combine different ways to form the hierarchy. For example, you could use Supervisor District » Category » Subcategory as the hierarchy and calculate <a href="https://sfgov.org/ccsfgsa/new-san-francisco-supervisorial-district-map" class="external" target="_blank" rel="noreferrer noopener"><span>per-district per-capita</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> incident rates.</p>
+<p>Node attributes can be the count of unique incident numbers associated with the node, average or median response time, per sqft incident rate, and so on.</p>
+<h3>1.2 Wrangling</h3>
+<p>You may use any tool or language to wrangle the dataset, including the SF Data interface itself. Specifically, students can use the "Filter" » "Sort &amp; Roll-Up" » "Roll-Ups &amp; Drill-Downs" functionality to start building a hierarchy from the dataset.</p>
+<p>Either way, I recommend you focus on getting the data into a table/CSV format and then use <code><a href="https://github.com/d3/d3-hierarchy#stratify" class="external" target="_blank" rel="noreferrer noopener"><span>d3.stratify</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a></code> to put it into the final hierarchical format required by D3. You need (1) a unique node identifier, (2) a way to determine the unique identifier of the parent node, and (3) some value for each leaf node.</p>
 <h2>2. Requirements</h2>
 <p>To earn credit, you must both satisfy one of the functionality levels below and provide the required writeups.</p>
 <table class="table table-hover">
@@ -406,63 +394,36 @@
 <tbody>
 <tr>
 <td style="text-align: center;"><code class="highlighter-rouge">D</code></td>
-<td style="text-align: left;">A visualization prototype in any other tool or language than D3v5.</td>
+<td style="text-align: left;">Wrangle data into a hierarchical JSON format.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code class="highlighter-rouge">C</code></td>
-<td style="text-align: left;">A static visualization in D3v5 with a projected district or neighborhood base map.</td>
+<td style="text-align: left;">The D-level requirements plus implement one node/link diagram with details-on-demand interactivity in D3v5.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code class="highlighter-rouge">B</code></td>
-<td style="text-align: left;">The C level requirements plus details-on-demand interactivity.</td>
+<td style="text-align: left;">The C-level requirements plus implement one space filling diagram with details-on-demand interactivity in D3v5.</td>
 </tr>
 <tr>
 <td style="text-align: center;"><code class="highlighter-rouge">A</code></td>
-<td style="text-align: left;">The B level requirements plus either zoom, filter, or brush interactivity.</td>
+<td style="text-align: left;">The B level requirements plus filtering, brushing, or zooming for <em>one</em> of the visualizations.</td>
 </tr>
 </tbody>
 </table>
-<p>The C, B, and A levels do not require prototyping, but it is encouraged.</p>
-<p>The homework website must have clear navigation to the required sections. Visualizations should be approximately 960 by 500 pixels wide, although some exceptions are reasonable.&nbsp;</p>
+<p>Prototyping is not required.</p>
+<p>The homework website must have clear navigation to the required sections. Visualizations should be within 960 by 500 pixels in size, although some exceptions are reasonable.&nbsp;</p>
 <h3>2.1 Functionality</h3>
 <p>The functionality by letter grade is as follows:</p>
 <h4>2.1.1 D Level Functionality</h4>
-<p>Visualize the dataset (see §1.1 for details) on a projected base map (see §1.2 for details) using one of the following visualization techniques:</p>
-<ul>
-<li>
-<p><strong>Non-Proportional Symbol Map:</strong> This option should show the location of every individual request made. You should encode an additional piece of categorical information using color.</p>
-<p>For example, you can color by the "Source", "Request Type", "Status", or "Responsible Agency" columns. Also, consider how to use shape, stroke, and opacity of the symbols effectively.</p>
-</li>
-<li>
-<p><strong>Proportional Symbol Map:</strong> Nest and rollup the data by either district or neighborhood, and visualize a numerical value using the size of each symbol. Choose the appropriate underlying boundary map based on your choice.</p>
-<p>You will also need to calculate the "center" of that region to place each the symbol. You should be able to use the <a href="https://github.com/d3/d3-geo/blob/master/README.md#path_centroid" class="external" target="_blank" rel="noreferrer noopener"><span>centroid method</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> in D3, but it might be easier to just find the <a href="https://bl.ocks.org/mbostock/1160929" class="external" target="_blank" rel="noreferrer noopener"><span>bounding box</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> for a region and calculate the center pixel location.</p>
-</li>
-<li>
-<p><strong>Choropleth Map:</strong> Nest and rollup the data by either district or neighborhood, and visualize a numerical value using fill color for that region.</p>
-<p>Choose the appropriate underlying boundary map based on your choice. Consider what color scales make the most sense for your data, and whether to use a threshold scale or linear scale.</p>
-<p><em>Ideally, you should calculate a per sq ft or per capita ratio FIRST, but this is not required since population data for this year is difficult to find.</em></p>
-</li>
-<li>
-<p><strong>Hexbin Map (Challenging):</strong> Use the <a href="https://github.com/d3/d3-hexbin" class="external" target="_blank" rel="noreferrer noopener"><span>d3-hexbin library</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> to bin the incidents and display those bins. You can choose to color or size the bin to show the number of incidents that occurred in that bin.</p>
-</li>
-</ul>
-<p>Choose whichever technique you are more interested in–all are worth the same amount of points. For D-level functionality, you may do this in any tool.</p>
+<p>Successfully wrangle the data into a hierarchical format that can be interpreted by either <a href="https://github.com/d3/d3-hierarchy#hierarchy" class="external" target="_blank" rel="noreferrer noopener"><span>d3.hierarchy()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> or <a href="https://github.com/d3/d3-hierarchy#stratify" class="external" target="_blank" rel="noreferrer noopener"><span>d3.stratify()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>. The hierarchy must have height 3 or more (i.e. at least 3 levels including the root and leaf nodes) and each leaf node must have an attribute.</p>
 <h4>2.1.2 C Level Functionality</h4>
-<p>Complete the D level functionality using <strong>D3 version 5</strong>.</p>
+<p>Complete the D-level functionality and implement a node link visualization using the <a href="https://github.com/d3/d3-hierarchy#cluster" class="external" target="_blank" rel="noreferrer noopener"><span>d3.cluster()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> or <a href="https://github.com/d3/d3-hierarchy#tree" class="external" target="_blank" rel="noreferrer noopener"><span>d3.tree()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a> layout. You may use any Coordinate system (Cartesian or polar) and any edge style (straight or curved).</p>
+<p>The node attribute must be encoded somehow (i.e. using color, size, shape, etc.). Nodes must have a minimum details-on-demand interactivity showing the node label.</p>
 <h4>2.1.3 B Level Functionality</h4>
-<p>Complete the C level functionality and implement <strong>details-on-demand interactivity</strong>.</p>
-<p>For example, show details when the mouse hovers over a region and/or symbol. You should implement this in base D3—please do not use a tooltip library. Your details should be readable and informative. Think about which details will be useful and adjust the formatting of the text as appropriate.</p>
+<p>Complete the C-level functionality and implement a space-filling or enclosure visualization using <a href="https://github.com/d3/d3-hierarchy#partition" class="external" target="_blank" rel="noreferrer noopener"><span>d3.partition()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, <a href="https://github.com/d3/d3-hierarchy#treemap" class="external" target="_blank" rel="noreferrer noopener"><span>d3.treemap()</span><span aria-hidden="true" class="ui-icon ui-icon-extlink ui-icon-inline" title="Links to an external site."></span><span class="screenreader-only">&nbsp;(Links to an external site.)</span></a>, or <a href="d3.pack()">d3.pack()</a> layouts. You may use any Coordinate system (Cartesian or polar).</p>
+<p>The node attribute must be encoded somehow (i.e. using color, size, shape, etc.). Nodes must have a minimum details-on-demand interactivity showing the node label.</p>
 <h4>2.1.4 A Level Functionality</h4>
-<p>Complete the B level functionality and implement one of the following:</p>
-<ul>
-<li>
-<p><strong>Zooming AND Panning:</strong> Allow users to zoom in on a region (either mouse scroll or click) and pan (drag) the view while zoomed in. This will work with any of the visualization techniques, but it can be tricky to properly scale the size of symbols depending on the approach you take.</p>
-</li>
-<li>
-<p><strong>Brushing OR Filtering:</strong> Allow users to either brush or filter the data. Choose a column in the dataset with categorical or discrete data,&nbsp; and then determine how to control which information is brushed/filtered based on that column. Be creative. For example, you could add a linked visualization/legend to control what data is brushed/filtered, or add HTML form controls. Alternatively, if using a symbol map, you could brush/filter other symbols based on a shared characteristic of the symbol clicked on.</p>
-</li>
-</ul>
-<p>You only need to choose one of the above options, but they should be <em>in addition</em> to details-on-demand interactivity.</p>
+<p>Complete the B-level functionality and implement filtering, brushing, or zooming in either of the two hierarchical visualizations you created. You only need to implement this interactivity in one of the visualizations, but must still support details-on-demand interactivity in that visualization.</p>
 <h3>2.2 Writeups</h3>
 <p>The following writeups are <strong>required to earn credit</strong>, regardless of the level of functionality implemented:</p>
 <ul>
@@ -517,10 +478,9 @@
 </ul>
 <p>All of the above must be true to qualify for a plus-level letter grade.</p>
 <h2>3. Submission</h2>
-<p>See the <a title="Homework 3 Peer Review Submission" href="/courses/1590235/assignments/6908008" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908008" data-api-returntype="Assignment">Homework 3 Peer Review Submission</a> assignment for the Github Classroom link to setup your homework repository.</p>
+<p>See the <a title="Homework 4 Peer Review Submission" href="/courses/1590235/assignments/6908018" data-api-endpoint="https://usfca.instructure.com/api/v1/courses/1590235/assignments/6908018" data-api-returntype="Assignment">Homework 4 Peer Review Submission</a> assignment for the Github Classroom link to setup your homework repository.</p>
 <p>No submission for this assignment is required; all created repositories will be graded.</p>
 <p class="text-danger"><span style="color: #ff0000;"><strong> If work is committed after the deadline, the repository will be rolled back to the last commit before the deadline prior to grading.</strong></span></p></div>
-
 							</div>
 						  <!-- End page content -->
 						</div>

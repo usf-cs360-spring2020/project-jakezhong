@@ -165,6 +165,43 @@
 									  	<span class="list-nav-icon">
 											<i class="material-icons">folder_open</i>
 									  	</span>
+									  	<span class="list-nav-label">Homework 4</span>
+									  	<span class="list-nav-expand">
+											<i class="material-icons">add</i>
+									  	</span>
+									</a>
+									<ul class="list-nav-child">
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework4/overview.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Overview</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework4/implementation.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Implementations</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../homework4/requirements.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Requirements</span>
+										  </a>
+										</li>
+									</ul>
+								</li>
+								<li class="list-nav-item">
+									<a href="#" class="list-nav-link">
+									  	<span class="list-nav-icon">
+											<i class="material-icons">folder_open</i>
+									  	</span>
 									  	<span class="list-nav-label">Midterm</span>
 									  	<span class="list-nav-expand">
 											<i class="material-icons">add</i>
@@ -172,7 +209,7 @@
 									</a>
 									<ul class="list-nav-child">
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="#" class="list-nav-link">
+										  <a href="prototype.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
@@ -209,19 +246,43 @@
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/prototypes.html" class="list-nav-link">
+										  <a href="../final/about.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
-											<span class="list-nav-label">Prototypes</span>
+											<span class="list-nav-label">About</span>
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
-										  <a href="../final/implementation.html" class="list-nav-link">
+										  <a href="../final/dataset.html" class="list-nav-link">
 											<span class="list-nav-icon list-nav-icon-sm">
 											  <i class="material-icons">keyboard_arrow_right</i>
 											</span>
-											<span class="list-nav-label">Implementation</span>
+											<span class="list-nav-label">Dataset</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../final/alpha.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Alpha Release</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../final/beta.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Beta Release</span>
+										  </a>
+										</li>
+										<li class="list-nav-item list-nav-child-item">
+										  <a href="../final/final.html" class="list-nav-link">
+											<span class="list-nav-icon list-nav-icon-sm">
+											  <i class="material-icons">keyboard_arrow_right</i>
+											</span>
+											<span class="list-nav-label">Final Release</span>
 										  </a>
 										</li>
 										<li class="list-nav-item list-nav-child-item">
@@ -293,14 +354,13 @@
 				<div class="page-content">
 					<section class="page-heading">
 						<div class="container">
-							<h1 class="section-title">
-								<p>Midterm project, by <a href="https://jakezhong.com" target="_blank">Jake Zhong</a></p>
-							</h1>
+							<h1 class="section-title">Midterm project, by <a href="https://jakezhong.com" target="_blank">Jake Zhong</a></h1>
 							<p class="subtitle">Sum of Number of Records for each Neighborhooods</p>
 						</div>
 					</section>
 					<section class="project-overview">
 						<div class="container">
+							<hr class="space"/>
 							<p>In this prototype, I used the number of records as rows, neighborhoods as columns and call type group as color to demonstrate the number of emergency call occuring in different areas and their types. From the chart, we know that Tenderloin, South of Market and Mission areas have the largest number of records.</p>
 							<p>For this visualization, I want to have some interaction to help users understand the data better. For example, I will add a highlight, when a user hovers the bar, it will give a exact information of the number of records for the area and each call type. Besides, if user clicks on one call type on a bar, it should jump to another chart created by my teammate, which will display more detail about that type over time.</p>
 							<p>In terms of the theme, we want to answer the question: is the San Francisco Fire Department fully equipped to handle the multitude and wide range or emergencies that occur in San Francisco. My chart can indicate the number of records occuring in different areas of San Francisco, so we can know what area has the largest number of records and if the fire department can handle them in time.</p>
