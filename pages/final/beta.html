@@ -435,19 +435,90 @@
 						<div class="container">
 						  	<!-- Begin page content -->
 						  	<div class="content">
-								<h2 class="section-title">Prototype</h2>
-								<h3 class="section-title top-space">Average Price of Feb 2020 for each Region Name. The view is filtered on Region Name, which keeps 43 of 63 members.</h3>
-								<p>
-								For starter, I created a basic prototype based on the average price of different cities in the bay area in Feb 2020. Because the original dataset covers all data from the United States, so I did some data wrangling by filtering the data to focus on the cities only in the bay area, which are 63 cities in total and I got rid of 20 of them that showed no data in Feb 2020.</p>
+								<h2 class="section-title">Question</h2>
+								<h4>House Price</h4>
+								<ul>
+									<h5>What cities in the bay area have the highest house price in Jan 2020?</h5>
+									<li>What is the trend of the house price of the bay area in the last 5 years?</li>
+								</ul>
+								<h4>Count of House Sales</h4>
+								<ul>
+									<li>What is the count of house sales of all cities in the bay area?</li>
+									<li>What is the trend of the count of house sales of the bay area in the last 5 years?</li>
+								</ul>
+								<hr class="space">
+								<h2 class="section-title">Answer</h2>
+								<h4>House Price</h4>
+								<ul>
+									<li>According to the map, the south part of the bay area has a higher house price, following by the central part, while the north bay area has a lower house price.</li>
+									<li>According to the line chart, the average house price in the bay area kept growing and peaked at Jun 2018, but it started to drop in the following years.</li>
+								</ul>
+								<h4>Count of House Sales</h4>
+								<p>No answer at the moment yet.</p>
+								<hr class="space">
+								<h2 class="section-title">Prototype 1</h2>
+								<h3 class="section-title top-space">Bar Chart: Average Price of Feb 2020 for each Region Name. The view is filtered on Region Name, which keeps 43 of 63 members.</h3>
+								<h4 class="section-title top-space">Encoding</h4>
+								<ul>
+									<li>X-Axis: Average house price in the month of Jan 2020</li>
+									<li>Y-Axis: City names in the bay area</li>
+								</ul>
+								<h4 class="section-title top-space">Interactivity</h4>
+								<h5 class="section-title top-space">Tooltip & Highlight</h5>
+								<img src="../../assets/img/final/beta/beta-bar-interactivity1.gif" alt="Bar Interactivity">
+								<h5 class="section-title top-space">Sorting</h5>
+								<img src="../../assets/img/final/beta/beta-bar-interactivity2.gif" alt="Bar Interactivity">
+								<h4 class="section-title top-space">Prototype</h4>
 								<div class="card work-images">
 									<div class="card-body card-body-p">
 									  	<div class="chart-container">
 											<figure>
 												<img src="../../assets/img/final/beta/bar-chart.png" alt="passenger-count-activity-period">
 											</figure>
+										</div>
+									</div>
+								</div>
+								<h2 class="section-title">Prototype 2</h2>
+								<h3 class="section-title top-space">Line Chart: Average Price of from Jan 2014 to Jan 2020 by each Half Year for the Whole Bay Area.</h3>
+								<h4 class="section-title top-space">Encoding</h4>
+								<ul>
+									<li>X-Axis: Time period of each half year from Jan 2014 to Jan 2020</li>
+									<li>Y-Axis: The average house price of the whole bay area</li>
+
+								</ul>
+								<h4 class="section-title top-space">Interactivity</h4>
+								<h5 class="section-title top-space">Tooltip</h5>
+								<img src="../../assets/img/final/beta/beta-line-interactivity1.gif" alt="Bar Interactivity">
+								<h4 class="section-title top-space">Prototype</h4>
+								<div class="card work-images">
+									<div class="card-body card-body-p">
+									  	<div class="chart-container">
 											<figure>
 												<img src="../../assets/img/final/beta/line-chart.png" alt="passenger-count-activity-period">
 											</figure>
+									  	</div>
+									</div>
+								</div>
+								<h2 class="section-title">Prototype 3</h2>
+								<h3 class="section-title top-space">Map: Map based on Longitude (generated) and Latitude (generated).  Color shows average of 2020-01.  Size shows average of 2020-01.  Details are shown for Region Name.</h3>
+								<h4 class="section-title top-space">Encoding</h4>
+								<ul>
+									<li>Circle: Major cities in the bay area showed in the dataset</li>
+									<li>Color: Average house price in Jan 2020</li>
+									<li>Size: Currently also the average house price in Jan 2020, but will change to count of house sales in Jan 2020 in the implementation</li
+								</ul>
+								<h4 class="section-title top-space">Interactivity</h4>
+								<h5 class="section-title top-space">Tooltip</h5>
+								<img src="../../assets/img/final/beta/beta-map-interactivity1.gif" alt="Bar Interactivity">
+								<h5 class="section-title top-space">Zooming</h5>
+								<img src="../../assets/img/final/beta/beta-map-interactivity2.gif" alt="Bar Interactivity">
+								<h5 class="section-title top-space">Dragging</h5>
+								<img src="../../assets/img/final/beta/beta-map-interactivity3.gif" alt="Bar Interactivity">
+								<h5 class="section-title top-space">(Maybe) Filter</h5>
+								<h4 class="section-title top-space">Prototype</h4>
+								<div class="card work-images">
+									<div class="card-body card-body-p">
+									  	<div class="chart-container">
 											<figure>
 												<img src="../../assets/img/final/beta/map.png" alt="passenger-count-activity-period">
 											</figure>
