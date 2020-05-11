@@ -1,12 +1,20 @@
-# README
+# About Me
 
 <https://usf-cs360-spring2020.github.io/project-jakezhong>
 
-![Profile Image](profile.png)
+![Profile Image](profile.jpg)
 
-**Name:** Your Name  
-**Email:** <username@dons.usfca.edu>
+**Name:** Jake Zhong
 
-This is a template website using [Bulma](https://bulma.io/), [FontAwesome](https://origin.fontawesome.com/) for icons, and [Github Pages](). Designed to be modified (including this README file).
+**Email:** <jzhong1@dons.usfca.edu>
 
-*Template based on: <https://github.com/usf-cs360-spring2020/template-bulma>*
+**Major:** Computer Science Bridge
+
+**Expected graduation year:** 2022
+
+
+**Description**
+
+Hi there! This is Jake Zhong. I am from Guangdong China and I have been to America more than 5 years, with 5 years in Boston and half year in San Francisco.
+
+I love programming, especially things relavant to Web, such website, web game and web application and I started working on web products many years ago and I worked as a Web Developer before in Boston.
