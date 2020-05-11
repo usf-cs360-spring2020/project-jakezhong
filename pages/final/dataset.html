@@ -356,20 +356,19 @@
 							<p>The main dataset that I would use is the home values section from the <a href="https://www.zillow.com/research/data/" target="_blank">Zillow Research.</a></p>
 							<hr class="space"/>
 							<h2 class="section-title top-space">About the dataset</h2>
-							<p>Among the dataset, I chose the list of ZHVI All Homes (SFR, Condo/Co-op) Time Series ($) by the city category.</p>
+							<p>Among the dataset, I chose the list of ZHVI All Homes (SFR, Condo/Co-op) Time Series ($) by the city category and Monthly Home Sales (Number, Seasonally Adjusted) by the city too.</p>
 							<p>By the date I checked, this dataset has 27,539 rows and 293 columns and the file size is 63KB.</p>
 							<p>Some solumns I would use</p>
 							<ul>
-								<li>RegionID</li>
 								<li>Region Name</li>
 								<li>State</li>
-								<li>Metro</li>
-								<li>County Name</li>
-								<li>Size Rank</li>
+								<li>Monthly Average House Prices</li>
+								<li>Monthly Count of House Sales</li>
 							</ul>
 							<h3 class="section-title top-space">Home values</h3>
-							<p><b>Zillow Home Value Index (ZHVI):</b> A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65th to 95th percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5th to 35th percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage). Check out this overview of ZHVI and a deep-dive into its methodology.</p>
-
+							<p><strong>Zillow Home Value Index (ZHVI)</strong>: A smoothed, seasonally adjusted measure of the typical home value and market changes across a given region and housing type. Zillow publishes top-tier ZHVI ($, typical value for homes within the 65<sup>th</sup> to 95<sup>th</sup> percentile range for a given region) and bottom-tier ZHVI ($, typical value for homes that fall within the 5<sup>th</sup> to 35<sup>th</sup> percentile range for a given region). Zillow also publishes ZHVI for all single-family residences ($, typical value for all single-family homes in a given region), for condo/coops ($), for all homes with 1, 2, 3, 4 and 5+ bedrooms ($), and the ZHVI per square foot ($, typical value of all homes per square foot calculated by taking the estimated home value for each home in a given region and dividing it by the home’s square footage). Check out <a href="https://www.zillow.com/research/zhvi-methodology-2019-highlights-26221/" target="_blank" rel="nofollow noopener noreferrer">this overview of ZHVI</a> and <a href="https://www.zillow.com/research/zhvi-methodology-2019-deep-26226/" target="_blank" rel="nofollow noopener noreferrer">a deep-dive into its methodology</a>.</p>
+							<h3 class="section-title top-space">Inventory and sales</h3>
+							<p>Zillow provides data on sold homes, including sales counts (for which there’s <a href="https://www.zillow.com/research/home-sales-methodology-7733/" target="_blank" rel="noopener noreferrer">detailed methodology</a>), median sale price and median price cut for various housing types, &nbsp;and foreclosures provided as a share of all sales in which the home was previously foreclosed upon.</p>
 							<h3 class="section-title top-space">Home Types</h3>
 							<ul>
 								<li><b>All Homes:</b> Zillow defines all homes as single-family, condominium and co-operative homes with a county record. Unless specified, all series cover this segment of the housing stock.</li>
@@ -393,9 +392,14 @@ Monthly Inventory: The count of unique listings that were active at any time in 
 								<li><b>Home Sales, SA:</b> The number of homes sold during the given month, seasonally adjusted using the X-12-Arima method.
 Zillow Home Value Forecast (ZHVF): The ZHVF is the one-year forecast of the ZHVI.</li>
 							</ul>
-
+							
+							<h3 class="section-title top-space">City Geocoding</h3>
+							<p>Generate the geo coordinates of latitude and longitude for each city, which I've done with a Google Sheet Adds-on, <a href="https://gsuite.google.com/marketplace/app/geocode_by_awesome_table/904124517349" target="_blank">Geocode by Aweso</a></p>
 							<h3 class="section-title top-space">License</h3>
 							<p>This dataset follow the terms of use provided by Zillow its own license, which can be found at <a href="https://www.zillow.com/corp/PublicDataTerms.htm">Public Records Data Terms of Use Definitions</a></p>
+							
+							<h3 class="section-title top-space">Data Wrangling</h3>
+							<script src="https://gist.github.com/jakezhong/a453f9e46a549949f905c11c40bca2c0.js"></script>
 						</div>
 					</section>
 				</div>

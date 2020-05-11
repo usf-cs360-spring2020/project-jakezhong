@@ -16293,3 +16293,13 @@ pre {
     white-space: pre;
     white-space: pre-wrap;
 }
+
+.mw-category {
+	-webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.mw-content-ltr {
+    direction: ltr;
+}

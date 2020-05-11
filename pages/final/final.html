@@ -444,10 +444,31 @@
 					<section class="section">
 						<div class="container">
 							<!-- Begin page content -->
-							<h3 class="section-title">D3 Implementations</h3>
-							<h4 class="section-title top-space">Average House Price and Count of House Sales in Bay Area (2015 - 2020)</h4>
-							<p>The Map is based on Longitude and Latitude of the City. Color shows count of house sales and size shows average house price. Legends are shown for both average price of house and count of house sales.</p>
-							<p>The detail panel includes information of the whole area and also each city's information, including average price and count of house sales and average house price and count of house sales trend from 2015 to 2020.</p>
+							<h1>Final Implementation</h1>
+							<hr class="space">
+							<h2 class="section-title top-space">Average House Price and Count of House Sales in the Bay Area (2015 - 2020)</h2>
+							<table class="table table-hover">
+								<tr>
+									<th>Section</th>
+									<th>Description</th>
+								</tr>
+								<tr>
+									<td>Map</td>
+									<td>The Map is based on Longitude and Latitude of the City. Color shows count of house sales and size shows average house price. Legends are shown for both average price of house and count of house sales.</td>
+								</tr>
+								<tr>
+									<td>Tooltip of detail on-demand</td>
+									<td>Detail on-demand panel provides information for a individual city, including the city name, average house price and count of house sales (2015 - 2020).</td>
+								</tr>
+								<tr>
+									<td>General Detail Panel</td>
+									<td>The detail panel includes information of the whole area and also each city's information, including average price and count of house sales by city names and average house price and count of house sales trend of the whole area from 2015 to 2020.</td>
+								</tr>
+								<tr>
+									<td>Individual City Detail Panel</td>
+									<td>Detail graph panel provides visual information for a individual city, including average house price and count of house sales (2015 - 2020) bar charts and average house price and count of house sales trend (2015 - 2020) line charts.</td>
+								</tr>
+							</table>
 							<div class="card work-images">
 								<div class="card-body card-body-p">
 									<div class="chart-container">
@@ -517,35 +538,43 @@
 									</div>
 								</div>
 							</div>
-							<div class="fun-fact">
-								<h4>Fun Fact</h4>
-								<ul>
-									<li>
-										<h5>How many houses were sold in total during 2015 - 2020?</h5>
-										<p>414k houses were sold in the Bay Area in the period of Jan 2015 - Feb 2020.</p>
-									</li>
-									<li>
-										<h5>How much money is spent on real estate during 2015 - 2020?</h5>
-										<p>Nearly 6.8 billion dollars was spent on buying a house in the Bay Area in the period of Jan 2015 - Feb 2020. Wow, that’s so much money!</p>
-									</li>
-									<li>
-										<h5>Who sold the most houses in a year?</h5>
-										<p>San Jose sold 749 houses in the year 2015.</p>
-									</li>
-									<li>
-										<h5>Who sole the least houses in a year?</h5>
-										<p>Ignored those who didn’t sell a house in a year, Calistoga only sold 2 houses in 2020 so far. Although 2020 is not past yet, it’s still not a good number, isn’t it?</p>
-									</li>
-									<li>
-										<h5>The most expensive city in the area from 2015 to 2020?</h5>
-										<p>Believe it or not, Atherton in 2020 has the highest average house price at 6.55M dollars.</p>
-									</li>
-									<li>
-										<h5>Last but not least, how many lines of JavaScript did I write for this project?</h5>
-										<p>That was 1419, which was crazy, right? But of course, some of them were referred from the web, especially some usage of D3 implementation. Big thank you to those who shared solutions!!</p>
-									</li>
-								</ul>
-							</div>
+							<hr class="space">
+							<h3 class="section-title">What I've learned from this visualization</h3>
+							<ul>
+								<li>You need about 1M to buy a general house in the bay area, which is quite expensive.</li>
+								<li>Atherton, Los Altos Hills, Hillsborough Portola Valley and Belvedere are very expensive. Don’t buy a house there unless you are very rich.</li>
+								<li>Bestsellers in the area include San Jose, San Francisco, Oakland and Walnut Creek and their house price is very reasonable as well. If you are thinking to buy a house and resell it in the future, they are good choices.</li>
+								<li>The house price peaks in the period 2019 to 2020, so this moment is probably not a good time to purchase a house for investment, because we don’t know if the price will drop or grow.</li>
+								<li>The house sales dropped a lot since 2017, which means it becomes harder to sell a house in the bay area now than in the past.</li>
+							</ul>
+							<hr class="space">
+							<h3 class="section-title">Fun Fact</h3>
+							<ul>
+								<li>
+									<h5>How many houses were sold in total during 2015 - 2020?</h5>
+									<p>414k houses were sold in the Bay Area in the period of Jan 2015 - Feb 2020.</p>
+								</li>
+								<li>
+									<h5>How much money is spent on real estate during 2015 - 2020?</h5>
+									<p>Nearly 6.8 billion dollars was spent on buying a house in the Bay Area in the period of Jan 2015 - Feb 2020. Wow, that’s so much money!</p>
+								</li>
+								<li>
+									<h5>Who sold the most houses in a year?</h5>
+									<p>San Jose sold 749 houses in the year 2015.</p>
+								</li>
+								<li>
+									<h5>Who sole the least houses in a year?</h5>
+									<p>Ignored those who didn’t sell a house in a year, Calistoga only sold 2 houses in 2020 so far. Although 2020 is not past yet, it’s still not a good number, isn’t it?</p>
+								</li>
+								<li>
+									<h5>The most expensive city in the area from 2015 to 2020?</h5>
+									<p>Believe it or not, Atherton in 2020 has the highest average house price at 6.55M dollars.</p>
+								</li>
+								<li>
+									<h5>Last but not least, how many lines of JavaScript did I write for this project?</h5>
+									<p>That was 1419, which was crazy, right? But of course, some of them were referred from the web, especially some usage of D3 implementation. Big thank you to those who shared solutions!!</p>
+								</li>
+							</ul>
 					  		<!-- End page content -->
 						</div>
 					</section>

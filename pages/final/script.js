@@ -100,7 +100,7 @@ bayareaCitiesList.forEach(function(elem, index) {
 //			}
 //			
 //			data = [record, record, record...];
-let colorMain = "rgb(0, 114, 212)";
+let colorMain = "#3a92ff";
 let colorBlack = "rgb(0, 0, 0)";
 let colorWhite = "rgb(255, 255, 255)";
 let colorPrimary = "rgb(32, 206, 0)";
