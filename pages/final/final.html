@@ -10,83 +10,93 @@
 		<link rel="stylesheet" href="../../ui/vendor/perfect-scrollbar.css">
 		<link rel="stylesheet" href="../../ui/css/style.css">
 		<script src="../../ui/vendor/d3.v5.min.js"></script>
+		<script type="text/javascript" src="https://d3js.org/topojson.v3.min.js"></script>
 		<title>CS360/560 Data Visualization</title>
 	<style>
-		.map-container {
-			background-color: rgba(0,150,200,0.1);
-			font-size: 0;
+		#svg-container {
+			position: relative;
+			overflow: hidden;
 		}
-		#tooltip {
-		  font-weight: 600;
-		  text-shadow: 0px 0px 2px white;
-		  fill: black;
-		  stroke: none;
+		
+		#map {
+			background: #d5eaff;
 		}
-		.neighborhood-tooltip {
-			min-width: 100px;
-			background-color: #fff;
-			border-radius: 3px;
-			box-shadow: rgba(0,0,0,0.2);
-			padding: 10px;
-			font-size: 13px;
-			text-align: center;
+		.svg-row {
+			display: flex;
+			justify-content: space-between;
 		}
-
-		#map path.land {
-		  stroke: none;
+		
+		#panel-trigger {
+			width: 100%;
+			margin-bottom: 20px;
 		}
-
-		#map path.neighborhood {
-		  fill: none;
-		  stroke: white;
-		  stroke-width: 3.5px;
-		  pointer-events: none;
+		
+		#panel-trigger select {
+			display: block;
+			width: 100%;
+			font-size: 12px;
+			height: 30px;
+			line-height: 30px;
 		}
-
-		#map path.street {
-  		  fill: none;
-		  stroke: white;
-		  stroke-width: 1px;
-		  pointer-events: none;
+		
+		#panel-close {
+			float: right;
+			margin-bottom: 20px;
 		}
 
-		#map .active {
-		  stroke: #0099ff !important;
+        .states .active {
+            display:none;
+        }
+
+        .state-borders {
+            fill: none;
+            stroke: #000;
+            stroke-width: 0.5px;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            pointer-events: none;
+        }
+		
+		.counties {
+            fill: #919191;
 		}
 
-		#map circle.symbol {
-		  fill-opacity: 0.6;
-
-		  stroke: white;
+		.county-borders {
+			fill: none;
+			stroke: #fff;
+			stroke-width: 0.2px;
+			stroke-linejoin: round;
+			stroke-linecap: round;
+			pointer-events: none;
 		}
-		#map circle.active {
-		  fill: #0099ff;
-		  fill-opacity: 0.8;
-		  stroke: #000 !important;
-		}
-		#map a:link, #map a:visited {
-		  color: #444444;
-		}
-
-		#map a:hover, #map a:active {
-		  color: red;
+		
+		.detail-info {
+			background-color: rgba(0,0,0,0.8);
+			width: 300px;
+			color: #fff;
+			font-size: 11px;
+			padding: 8px;
 		}
 		.info-table {
-			background-color: rgba(0, 255, 255, 0.5);
-			width: 400px;
-			color: #000;
+			width: 100%;
 		}
+		
 		.info-table th {
 			white-space: nowrap;
+			padding: 2px;
 		}
+		
+		.info-table td {
+			white-space: nowrap;
+			padding: 2px;
+		}
+		
 		.info-table tr {
 			vertical-align: top;
 		}
-		.legend-title {
-			font-size: 16px;
-		}
-		.legend-label {
-			font-size: 12px;
+		
+		.details {
+			display: none;
 		}
 	</style>
 	</head>
@@ -433,490 +443,116 @@
 				<div class="page-content">
 					<section class="section">
 						<div class="container">
-						  	<!-- Begin page content -->
-						  	<div class="content">
-								<h3 class="section-title">Data Encoding</h3>
-								<ul>
-									<li>
-										<p><b>Basemap: </b>Neighborhoods of SF area</p>
-									</li>
-									<li>
-										<p><b>Color/Legend: </b>Range of case numbers</p>
-									</li>
-									<li>
-										<p><b>Circle: </b>Individual case</p>
-									</li>
-									<li>
-										<p><b>Tooltip: </b>Neighborhood information</p>
-									</li>
-									<li>
-										<p><b>Detail Panel: </b>Case information</p>
-									</li>
-								</ul>
-								<hr class="space"/>
-								<h3 class="section-title top-space">Interactivity Guide</h3>
-								<h4 class="section-title top-space">Tooltip</h4>
-								<figure>
-									<p><img src="../../assets/img/homework3/interactivity1.gif" alt=""></p>
-									<figcaption>Hovering on a map's block will display a tooltip box and it will follow the user's mouse cursor.</figcaption>
-								</figure>
-								<h4 class="section-title top-space">Detail Panel</h4>
-								<figure>
-									<p><img src="../../assets/img/homework3/interactivity2.gif" alt=""></p>
-									<figcaption>Hovering on a map's circle will display a detail panel on the top-left corner of the map.</figcaption>
-								</figure>
-								<h4 class="section-title top-space">Zooming</h4>
-								<figure>
-									<p><img src="../../assets/img/homework3/interactivity3.gif" alt=""></p>
-									<figcaption>Zooming can be done by scrolling down or up on the map.</figcaption>
-								</figure>
-								<h4 class="section-title top-space">Dragging</h4>
-								<figure>
-									<p><img src="../../assets/img/homework3/interactivity4.gif" alt=""></p>
-									<figcaption>Pressing and moving the mouse on the map at the same time can drag the map around.</figcaption>
-								</figure>
-								<hr class="space"/>
-								<h3 class="section-title">Data Wrangling</h3>
-								<h4 class="section-title">API Request Filter</h4>
-								<p>I adjusted the SQL for the API request in order to only fetched the data of the category "Parking Enforcement" in February 2020.</p>
-								<script src="https://gist.github.com/jakezhong/085eeca6b8f4c24c4dd1629ec533d83d.js"></script>
-								<h4 class="section-title">Accumulation for neighborhood's case numbers</h4>
-								<p>In the original dataset, each neighborhood doesn’t have an accumulation of the case numbers, so I read all the cases and plus the number by the neighborhood in their properties. Here I use a set to avoid duplication and afterward, I convert the set to an array, which is more friendly for d3 implementation.</p>
-								<script src="https://gist.github.com/jakezhong/5d759d74f2ec9a6aee38b1b4373a04f2.js"></script>
-								<hr class="space"/>
-								<h3 class="section-title">Conclusion</h3>
-								<ul>
-									<li>Among all neighborhoods, the largest case number is 82 and the smallest case number is 0 in February 2020.</li>
-									<li>Most of the neighborhoods in the SF area see a very small number of cases, from 0 - 10. While a few neighborhoods have many more case numbers, for example, Mission has 82 and Outer Richmond has 68 cases in February 2020.</li>
-									<li>Among all the cases, by the date I fetched, most of them are already closed, and there are only about 10 opened cases in total in the SF area in February 2020.</li>
-								</ul>
-								<hr class="space"/>
-								<h3 class="section-title">Attribution</h3>
-									<p>For this project, I referred some D3 examples, such as non-proportional symbol map from our lab exercise, legend, color scale and zooming interactivity on the web.</p>
-									<h4 class="section-title top-space">References</h4>
-									<p>
-										<a href="https://www.d3-graph-gallery.com/graph/custom_legend.html" target="_blank">D3 Graph Gallery: D3 Legend Example</a><br/>
-										<a href="https://bl.ocks.org/mbostock/8fadc5ac9c2a9e7c5ba2" target="_blank">Map Pan & Zoom I</a><br/>
-										<a href="https://bl.ocks.org/hepplerj/f2f4e5f4a9321428b11614674c741177" target="_blank">Threshold scale</a><br/>
-										<a href="https://observablehq.com/@d3/color-schemes" target="_blank">Color Schemes</a>
-									</p>
-								<hr class="space"/>
-								<h3 class="section-title">D3 Implementation</h3>
-								<div class="card work-images">
-									<div class="card-body card-body-p">
-									  	<div class="chart-container">
-									  		<div class="map-container">
-												<svg width="960" height="600" id="map">
-													<g id="basemap"></g>
-
-													<!-- turn off pointer events for certain groups -->
-													<g id="streets" pointer-events="none"></g>
-													<g id="outline" pointer-events="none"></g>
-
-													<g id="cases"></g>
-													<g id="tooltip" pointer-events="none"></g>
-													<g id="details" pointer-events="none"></g>
-													<g id="legend" pointer-events="none"></g>
-										  		</svg>
-									  		</div>
-									  	</div>
+							<!-- Begin page content -->
+							<h3 class="section-title">D3 Implementations</h3>
+							<h4 class="section-title top-space">Average House Price and Count of House Sales in Bay Area (2015 - 2020)</h4>
+							<p>The Map is based on Longitude and Latitude of the City. Color shows count of house sales and size shows average house price. Legends are shown for both average price of house and count of house sales.</p>
+							<p>The detail panel includes information of the whole area and also each city's information, including average price and count of house sales and average house price and count of house sales trend from 2015 to 2020.</p>
+							<div class="card work-images">
+								<div class="card-body card-body-p">
+									<div class="chart-container">
+										<div class="implementation-container">
+											<div id="svg-container">
+												<div class="svg-row">
+													<div class="svg-col">
+														<svg id="map">
+															<g id="basemap">
+																<g id="us-map">
+																	<g id="states"></g>
+																	<g id="counties"></g>
+																	<g id="cities"></g>
+																</g>
+															</g>
+															<g id="legend" pointer-events="none"></g>
+															<g id="detail-panel" pointer-events="none"></g>
+														</svg>
+													</div>
+													<div class="svg-col">
+														<div id="panel">
+															<div class="general">
+																<div id="panel-trigger">
+																	<select>
+																		<option value=".bar-price">Bar - Average Price of Houses (2015 - 2020)</option>
+																		<option value=".bar-count">Bar - Count of House Sales (2015 - 2020)</option>
+																		<option value=".line-price">Line - Average Price Trend (2015 - 2020)</option>
+																		<option value=".line-count">Line - Count of House Sales Trend (2015 - 2020)</option>
+																	</select>
+																</div>
+																<div class="bar-price">
+																	<svg id="bar-price"></svg>
+																</div>
+																<div class="bar-count">
+																	<svg id="bar-count"></svg>
+																</div>
+																<div class="line-price">
+																	<svg id="line-price"></svg>
+																</div>
+																<div class="line-count">
+																	<svg id="line-count"></svg>
+																</div>
+															</div>
+															<div class="details">
+																<button id="panel-close" class="btn btn-danger">Close</button>
+																<div id="detail-1">
+																	<div class="detail-1-bar-1">
+																		<svg id="detail-1-bar-1"></svg>
+																	</div>
+																	<div class="detail-1-bar-2 space">
+																		<svg id="detail-1-bar-2"></svg>
+																	</div>
+																	<hr class="space">
+																	<div class="detail-1-bar-3 space">
+																		<svg id="detail-1-line-1"></svg>
+																	</div>
+																	<div class="detail-1-bar-4 space">
+																		<svg id="detail-1-line-2"></svg>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
-					  		</div>
-						  <!-- End page content -->
+							</div>
+							<div class="fun-fact">
+								<h4>Fun Fact</h4>
+								<ul>
+									<li>
+										<h5>How many houses were sold in total during 2015 - 2020?</h5>
+										<p>414k houses were sold in the Bay Area in the period of Jan 2015 - Feb 2020.</p>
+									</li>
+									<li>
+										<h5>How much money is spent on real estate during 2015 - 2020?</h5>
+										<p>Nearly 6.8 billion dollars was spent on buying a house in the Bay Area in the period of Jan 2015 - Feb 2020. Wow, that’s so much money!</p>
+									</li>
+									<li>
+										<h5>Who sold the most houses in a year?</h5>
+										<p>San Jose sold 749 houses in the year 2015.</p>
+									</li>
+									<li>
+										<h5>Who sole the least houses in a year?</h5>
+										<p>Ignored those who didn’t sell a house in a year, Calistoga only sold 2 houses in 2020 so far. Although 2020 is not past yet, it’s still not a good number, isn’t it?</p>
+									</li>
+									<li>
+										<h5>The most expensive city in the area from 2015 to 2020?</h5>
+										<p>Believe it or not, Atherton in 2020 has the highest average house price at 6.55M dollars.</p>
+									</li>
+									<li>
+										<h5>Last but not least, how many lines of JavaScript did I write for this project?</h5>
+										<p>That was 1419, which was crazy, right? But of course, some of them were referred from the web, especially some usage of D3 implementation. Big thank you to those who shared solutions!!</p>
+									</li>
+								</ul>
+							</div>
+					  		<!-- End page content -->
 						</div>
 					</section>
 				</div>
 			</div>
 		</div>
-		<script>
-			const urls = {
-				basemap: "https://data.sfgov.org/resource/6ia5-2f8k.geojson",
-				streets: "https://data.sfgov.org/resource/3psu-pn9h.geojson?$limit=2000",
-				cases: "https://data.sfgov.org/resource/vw6y-z8j6.json"
-//				cases: "https://data.sfgov.org/resource/nwbb-fxkq.json"
-//				arrests: "https://data.sfgov.org/resource/nwbb-fxkq.json"
-			};
-			
-			// calculate date range
-			const end = d3.timeDay.floor(d3.timeDay.offset(new Date(), -1));
-			const start = d3.timeDay.floor(d3.timeDay.offset(end, -7));
-			const format = d3.timeFormat("%Y-%m-%dT%H:%M:%S");
-			console.log(format(start), format(end));
-
-			// add parameters to arrests url
-//			urls.cases += "?$where=starts_with(resolution, 'Cite or Arrest')";
-//			urls.cases += " AND incident_date between '" + format(start) + "'";
-//			urls.cases += " and '" + format(end) + "'";
-//			urls.cases += " AND point IS NOT NULL";
-//			console.log(urls.cases);
-
-			urls.cases += "?$where=starts_with(service_name, 'Parking Enforcement')";
-			urls.cases += " AND requested_datetime between '2020-02-01T00:00:00'";
-			urls.cases += " and '2020-02-29T23:59:59'";
-			urls.cases += " AND point IS NOT NULL";
-			console.log(urls.cases);
-			// output url before encoding
-			
-			// encode special characters
-			// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI
-			urls.cases = encodeURI(urls.cases);
-			console.log(urls.cases);
-
-			const svg = d3
-				.select(".map-container")
-				.select("svg#map")
-			  	.attr("x", 0);
-			
-			let width = 960;
-			
-			let height = 500;
-			
-			let neighborhoods_set = d3.map();
-				
-			let neighborhoods = [];
-			
-			let color_range = [];
-			
-			var colorScale;
-			
-			const g = {
-			  basemap: svg.select("g#basemap"),
-			  streets: svg.select("g#streets"),
-			  outline: svg.select("g#outline"),
-			  cases: svg.select("g#cases"),
-			  tooltip: svg.select("g#tooltip"),
-			  details: svg.select("g#details"),
-			  legend: svg.select("g#legend")
-			};
-			
-			// setup tooltip (shows neighborhood name)
-			const tip = g
-			.tooltip
-			.append("foreignObject")
-			.attr("class", "neighborhood-tooltip");
-			
-			tip.attr("text-anchor", "end");
-			tip.attr("dx", -5);
-			tip.attr("dy", -5);
-			tip.attr("width", 200);
-			tip.attr("height", 60);
-			tip.style("visibility", "hidden");
-
-			// add details widget
-			// https://bl.ocks.org/mbostock/1424037
-			const details = g.details
-				.append("foreignObject")
-				.attr("id", "details")
-			  	.attr("width", width)
-			  	.attr("height", height)
-			  	.attr("x", 0)
-			  	.attr("y", 0);
-
-			const body = details.append("xhtml:body")
-			  .style("text-align", "left")
-			  .style("background", "none")
-			  .html("<p>N/A</p>");
-
-			details.style("visibility", "hidden");
-
-			// setup projection
-			// https://github.com/d3/d3-geo#geoConicEqualArea
-			const projection = d3.geoConicEqualArea();
-			projection.parallels([37.692514, 37.840699]);
-			projection.rotate([122, 0]);
-
-			// setup path generator (note it is a GEO path, not a normal path)
-			const path = d3.geoPath().projection(projection);
-
-			d3.json(urls.basemap).then(function(json) {
-				// makes sure to adjust projection to fit all of our regions
-				projection.fitSize([width, height], json);
-			
-				d3.json(urls.streets).then(drawStreets);
-				
-				d3.json(urls.cases).then(function(json) {
-					fillNeighborhood(json);
-					d3.json(urls.basemap).then(drawBasemap);
-					// draw the land and neighborhood outlines
-					drawCases(json);
-					drawLegend();
-				});
-
-				// now that projection has been set trigger loading the other files
-				// note that the actual order these files are loaded may differ
-			});
-
-			function drawBasemap(json) {
-			  console.log("basemap", json);
-			
-			  const basemap = g.basemap.selectAll("path.land")
-				.data(json.features)
-				.enter()
-				.append("path")
-				.attr("d", path)
-				.attr("class", "land")
-    			.attr("transform", "translate(0," + 100 + ")")
-			    .attr("fill", function(d) {
-				  if (neighborhoods_set.get(d.properties.name)) {
-					  d.number = neighborhoods_set.get(d.properties.name).number;
-				  } else {
-					  d.number = 0;
-				  }
-				  return colorScale(d.number);
-			    });
-
-//			  console.table(neighborhoods_set);
-				
-			  const outline = g.outline.selectAll("path.neighborhood")
-				  .data(json.features)
-				  .enter()
-				  .append("path")
-				  .attr("d", path)
-				  .attr("class", "neighborhood")
-    			  .attr("transform", "translate(0," + 100 + ")")
-				  .each(function(d) {
-					// save selection in data for interactivity
-					// saves search time finding the right outline later
-					d.properties.outline = this;
-				  });
-
-			  // add highlight
-			  basemap.on("mouseover.highlight", function(d) {
-				d3.select(d.properties.outline).raise();
-				d3.select(d.properties.outline).classed("active", true);
-			  })
-			  .on("mouseout.highlight", function(d) {
-				d3.select(d.properties.outline).classed("active", false);
-			  });
-
-			  // add tooltip
-			  basemap.on("mouseover.tooltip", function(d) {
-				let html = d.properties.name;
-					html += "<br># of cases: " + d.number;
-				  
-				tip.html(html);
-				tip.style("visibility", "visible");
-			  })
-			  .on("mousemove.tooltip", function(d) {
-				const coords = d3.mouse(g.basemap.node());
-				tip.attr("x", coords[0] - 100);
-				tip.attr("y", coords[1] - 65);
-			  })
-			  .on("mouseout.tooltip", function(d) {
-				tip.style("visibility", "hidden");
-			  });
-			}
-			
-			// initialize a neighborhood list and store its case number
-			function fillNeighborhood(json) {
-				json.forEach(function(neighborhood) {
-					let name = neighborhood.neighborhoods_sffind_boundaries;
-					if (neighborhoods_set.has(name)) {
-						neighborhoods_set.get(name).number += 1;
-					} else {
-						neighborhoods_set.set(name, {name: name, number: 1});
-					}
-				});
-				
-				neighborhoods_set.each(function(e) {
-					neighborhoods.push([e.name, e.number]);
-				});
-				
-				color_max = d3.max(neighborhoods.map(function(d) {
-					return d[1];
-				}));
-				
-				color_max = Math.ceil(color_max/100)*100;
-				
-				for (let i = 1; i < 6; i++) {
-					color_range.push(i * color_max/5);
-				}
-				
-				colorScale = d3.scaleThreshold()
-				.domain(color_range)
-		  		.range(["#fff1de", "#fdd5a4", "#f88457", "#e55037", "#8e0000"]);
-			}
-			
-			function drawStreets(json) {
-			  console.log("streets", json);
-
-			  // only show active streets
-			  const streets = json.features.filter(function(d) {
-				return d.properties.active;
-			  });
-
-			  console.log("removed", json.features.length - streets.length, "inactive streets");
-
-			  g.streets.selectAll("path.street")
-				.data(streets)
-				.enter()
-				.append("path")
-				.attr("d", path)
-    			.attr("transform", "translate(0," + 100 + ")")
-				.attr("class", "street");
-			}
-						
-			function drawCases(json) {
-			  console.log("cases", json);
-
-			  // loop through and add projected (x, y) coordinates
-			  // (just makes our d3 code a bit more simple later)
-			  json.forEach(function(d) {
-				const latitude = parseFloat(d.lat);
-				const longitude = parseFloat(d.long);
-				const pixels = projection([longitude, latitude]);
-
-				d.x = pixels[0];
-				d.y = pixels[1];
-			  });
-
-			  const symbols = g.cases.selectAll("circle")
-				.data(json)
-				.enter()
-				.append("circle")
-				.attr("cx", d => d.x)
-				.attr("cy", d => d.y)
-				.attr("r", 5)
-			  	.style("stroke", 1)
-				.attr("class", "symbol")
-    			.attr("transform", "translate(0," + 100 + ")")
-				.attr("fill", function(d) {
-				  if (d.status_description != "Closed") {
-					return "red";
-				  }
-				  return;
-				});
-				
-			  symbols.on("mouseover", function(d) {
-				d3.select(this).raise();
-				d3.select(this).classed("active", true);
-
-				// use template literal for the detail table
-				// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-			  	let formatDate = d3.timeFormat("%B %d, %Y");
-				  
-				const html = `
-				  <table class="info-table" border="0" cellspacing="0" cellpadding="2">
-				  <tbody>
-					<tr>
-					  <th>Service Name:</th>
-					  <td>${d.service_name}</td>
-					</tr>
-					<tr>
-					  <th>Date:</th>
-					  <td>${formatDate(new Date(d.requested_datetime))}</td>
-					</tr>
-					<tr>
-					  <th>Neighborhood:</th>
-					  <td>${d.neighborhoods_sffind_boundaries}</td>
-					</tr>
-					<tr>
-					  <th>Vehicle Details:</th>
-					  <td>${d.service_details}</td>
-					</tr>
-					<tr>
-					  <th>Status:</th>
-					  <td>${d.status_description}</td>
-					</tr>
-					<tr>
-					  <th>Description:</th>
-					  <td>${d.status_notes}</td>
-					</tr>
-				  </tbody>
-				  </table>
-				`;
-
-				body.html(html);
-				details.style("visibility", "visible");
-			  });
-
-			  symbols.on("mouseout", function(d) {
-				d3.select(this).classed("active", false);
-				details.style("visibility", "hidden");
-			  });
-			}
-
-			function drawLegend() {
-				let legend_height = 20;
-				let legend_width = 40;
-				
-			  	const legend = g.legend
-				    .attr("x", 0)
-				    .attr("y", 0);
-				
-				let background = legend
-					.append("rect")
-					.attr("width", 300)
-					.attr("height", 90)
-					.attr("x", 645)
-					.attr("y", 0)
-					.style("fill", "#fff");
-				
-				// Add one dot in the legend for each name.
-				let legend_title = legend
-					.append("text")
-				   	.attr("transform", "translate(100,0)")
-				   	.text("Total Cases")
-					.attr("x", 650)
-					.attr("y", 30)
-					.style("fill", "#000")
-				   	.attr("class", "legend-title");
-
-//				console.log(colorScale);
-				let legend_rect = legend.selectAll("legend-rects")
-					.data(colorScale.range())
-					.enter()
-					.append("rect")
-					.attr("x", function(d,i){ return 690 + i * legend_width })
-					.attr("y", 50)
-					.attr("width", legend_width)
-					.attr("height", legend_height)
-					.attr("class", "legend-rect")
-					.style("fill", function(d) {
-						return d;
-					});
-
-				// Legend labels
-				legend
-				.append("text")
-				.attr("x", 675)
-				.attr("y", 45)
-				.text("0")
-				.attr("text-anchor", "left")
-				.style("alignment-baseline", "middle")
-				.attr("class", "legend-label")
-				.style("fill", "#000");
-
-				legend
-				.append("text")
-				.attr("x", 895)
-				.attr("y", 45)
-				.text("100")
-				.attr("text-anchor", "left")
-				.style("alignment-baseline", "middle")
-				.attr("class", "legend-label")
-				.style("fill", "#000");
-			}
-			
-			// Zooming for the bars
-			const extent = [0, [width, height]];
-
-			svg.call(d3.zoom()
-			.scaleExtent([1, 4])
-			.extent([[0, 0], [width, height]])
-			.on("zoom", zoomed));
-
-			function zoomed() {
-				g.basemap.selectAll("path.land").attr('transform', d3.event.transform);
-				g.outline.selectAll("path.neighborhood").attr('transform', d3.event.transform);
-			  	g.streets.selectAll("path.street").attr('transform', d3.event.transform);
-				g.cases.selectAll("circle")
-					.attr('transform', d3.event.transform)
-					.attr("r", 5/d3.event.transform.k)
-					.style("stroke-width", 1/d3.event.transform.k);
-			}
-		</script>
+		<script src="script.js"></script>
 		<script src="../../ui/vendor/jquery.min.js"></script>
 		<script src="../../ui/vendor/popper.min.js"></script>
 		<script src="../../ui/vendor/bootstrap.min.js"></script>
