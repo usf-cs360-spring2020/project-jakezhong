@@ -43,9 +43,13 @@
 			float: right;
 			margin-bottom: 20px;
 		}
+		
+		.city.active {
+			fill: #3a92ff !important;
+		}
 
         .states .active {
-            display:none;
+            display: none;
         }
 
         .state-borders {
@@ -444,9 +448,10 @@
 					<section class="section">
 						<div class="container">
 							<!-- Begin page content -->
-							<h1>Final Implementation</h1>
+							<h1>Average Home Price and Count of Home Sales in the Bay Area (2015 - 2020)</h1>
 							<hr class="space">
-							<h2 class="section-title top-space">Average House Price and Count of House Sales in the Bay Area (2015 - 2020)</h2>
+							<p>Jake Zhong | May 12, 2020</p>
+							<h3 class="section-title top-space">Data Encoding</h3>
 							<table class="table table-hover">
 								<tr>
 									<th>Section</th>
@@ -454,21 +459,133 @@
 								</tr>
 								<tr>
 									<td>Map</td>
-									<td>The Map is based on Longitude and Latitude of the City. Color shows count of house sales and size shows average house price. Legends are shown for both average price of house and count of house sales.</td>
+									<td>The whole map is a US county map, and the projection is the bay area. Circles represent a city in the area based on the geo-coordinates. Colors represent the count of home sales (2015 - 2020) and sizes represent the average home price (2015 - 2020).</td>
 								</tr>
 								<tr>
-									<td>Tooltip of detail on-demand</td>
-									<td>Detail on-demand panel provides information for a individual city, including the city name, average house price and count of house sales (2015 - 2020).</td>
+									<td>Bar</td>
+									<td>The X-axis is the average home price or the count of home sales of the city (2015 - 2020) and the Y-axis is the city names in the Bay Area. Color is the count of home sales.</td>
 								</tr>
 								<tr>
-									<td>General Detail Panel</td>
-									<td>The detail panel includes information of the whole area and also each city's information, including average price and count of house sales by city names and average house price and count of house sales trend of the whole area from 2015 to 2020.</td>
+									<td>Line</td>
+									<td>The X-axis is years from 2015 to 2020 (price) or 2015 to 2019 (count), Y-axis is the average home price or the count of home sales. Color is neutral.</td>
 								</tr>
 								<tr>
-									<td>Individual City Detail Panel</td>
-									<td>Detail graph panel provides visual information for a individual city, including average house price and count of house sales (2015 - 2020) bar charts and average house price and count of house sales trend (2015 - 2020) line charts.</td>
+									<td>Legend</td>
+									<td>Color is the count of home sales (2015 - 2020) and the size is the average home price.</td>
+								</tr>
+								<tr>
+									<td>Tooltip</td>
+									<td>Detail on-demand panel provides information for a individual city, including the city name, average home price and count of home sales (2015 - 2020).</td>
 								</tr>
 							</table>
+							<hr class="space">
+							<h3 class="section-title top-space">Interactivity Guide</h3>
+							<h4 class="section-title top-space">Map</h4>
+							
+							<table class="table table-hover">
+								<tr>
+									<th style="width: 15%">Interactivity</th>
+									<th style="width: 35%">Description</th>
+									<th style="width: 50%">Demo</th>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Zoom</h5>
+									</td>
+									<td>
+										<p>Scroll or double click on the map allows you to zoom-in and zoom-out.</p>
+									</td>
+									<td>
+										<img style="max-width: 220px" src="../../assets/img/final/final/interactivity1.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Drag</h5>
+									</td>
+									<td>
+										<p>Press your mouse and hold it allows you to move the map.</p>
+									</td>
+									<td>
+										<img style="max-width: 220px" src="../../assets/img/final/final/interactivity2.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Hover</h5>
+									</td>
+									<td>
+										<p>Mouse hover on the circle will highlight the circle and the matched city in the bar and also display the tooltip.</p>
+									</td>
+									<td>
+										<img style="max-width: 300px" src="../../assets/img/final/final/interactivity3.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Click</h5>
+									</td>
+									<td>
+										<p>Click on the circle or the bar will display the detail on-demand panel on the sidebar which provides information for the highlighted city.</p>
+									</td>
+									<td>
+										<img style="max-width: 300px" src="../../assets/img/final/final/interactivity4.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+							</table>
+							<h4 class="section-title top-space">Bar</h4>
+							
+							<table class="table table-hover">
+								<tr>
+									<th style="width: 15%">Interactivity</th>
+									<th style="width: 35%">Description</th>
+									<th style="width: 50%">Demo</th>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Hover</h5>
+									</td>
+									<td>
+										<p>Mouse hover on a line of the bar will highlight the matched circle and also display the tooltip.</p>
+									</td>
+									<td>
+										<img style="max-width: 300px" src="../../assets/img/final/final/interactivity5.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Click</h5>
+									</td>
+									<td>
+										<p>Click on a line of the bar will display the detail on-demand panel on the sidebar which provides information for the highlighted city.</p>
+									</td>
+									<td>
+										<img style="max-width: 300px" src="../../assets/img/final/final/interactivity6.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+							</table>
+							<h4 class="section-title top-space">Dropdown</h4>
+							
+							<table class="table table-hover">
+								<tr>
+									<th style="width: 15%">Interactivity</th>
+									<th style="width: 35%">Description</th>
+									<th style="width: 50%">Demo</th>
+								</tr>
+								<tr>
+									<td>
+										<h5 class="section-title">Select</h5>
+									</td>
+									<td>
+										<p>The dropdown menu allows you to switch different types of graphs, such as bar for average price and line for average price trend.</p>
+									</td>
+									<td>
+										<img style="max-width: 300px" src="../../assets/img/final/final/interactivity7.gif" alt="Bar Interactivity">
+									</td>
+								</tr>
+							</table>
+							<hr class="space">
+							<h3 class="section-title top-space">D3 Implementation</h3>
 							<div class="card work-images">
 								<div class="card-body card-body-p">
 									<div class="chart-container">
@@ -493,10 +610,10 @@
 															<div class="general">
 																<div id="panel-trigger">
 																	<select>
-																		<option value=".bar-price">Bar - Average Price of Houses (2015 - 2020)</option>
-																		<option value=".bar-count">Bar - Count of House Sales (2015 - 2020)</option>
+																		<option value=".bar-price">Bar - Average Price of Homes (2015 - 2020)</option>
+																		<option value=".bar-count">Bar - Count of Home Sales (2015 - 2020)</option>
 																		<option value=".line-price">Line - Average Price Trend (2015 - 2020)</option>
-																		<option value=".line-count">Line - Count of House Sales Trend (2015 - 2020)</option>
+																		<option value=".line-count">Line - Count of Home Sales Trend (2015 - 2020)</option>
 																	</select>
 																</div>
 																<div class="bar-price">
@@ -539,36 +656,36 @@
 								</div>
 							</div>
 							<hr class="space">
-							<h3 class="section-title">Conslusion and Inspiration</h3>
+							<h3 class="section-title">Findings</h3>
 							<ul>
-								<li>You need about 1M to buy a general house in the bay area, which is quite expensive.</li>
-								<li>Atherton, Los Altos Hills, Hillsborough Portola Valley and Belvedere are very expensive. Don’t buy a house there unless you are very rich.</li>
-								<li>Bestsellers in the area include San Jose, San Francisco, Oakland and Walnut Creek and their house price is very reasonable as well. If you are thinking to buy a house and resell it in the future, they are good choices.</li>
-								<li>The house price peaks in the period 2019 to 2020, so this moment is probably not a good time to purchase a house for investment, because we don’t know if the price will drop or grow.</li>
-								<li>The house sales dropped a lot since 2017, which means it becomes harder to sell a house in the bay area now than in the past.</li>
+								<li>You need about 1M to buy a average home in the bay area, which is quite expensive.</li>
+								<li>Atherton, Los Altos Hills, Hillsborough Portola Valley and Belvedere are very expensive, averaging ~3M. Don’t buy a home there unless you are very rich.</li>
+								<li>Bestsellers in the area include San Jose, San Francisco, Oakland and Walnut Creek and their home price is very reasonable as well, about 1M. If you are thinking to buy a home and resell it in the future, they are good choices.</li>
+								<li>The home price peaks in 2020, so this moment is probably not a good time to purchase a home for investment, because we can't predict if the price will drop or grow next month.</li>
+								<li>The home sales dropped a lot since 2017, which means it becomes harder to sell a home in the bay area now than in the past.</li>
 							</ul>
 							<hr class="space">
-							<h3 class="section-title">Fun Fact</h3>
+							<h3 class="section-title">Fun Facts</h3>
 							<ul>
 								<li>
-									<h5>How many houses were sold in total during 2015 - 2020?</h5>
-									<p>414k houses were sold in the Bay Area in the period of Jan 2015 - Feb 2020.</p>
+									<h5>How many homes were sold in total during 2015 - 2020?</h5>
+									<p>414k homes were sold in the Bay Area in the period of Jan 2015 - Feb 2020.</p>
 								</li>
 								<li>
 									<h5>How much money is spent on real estate during 2015 - 2020?</h5>
-									<p>Nearly 6.8 billion dollars was spent on buying a house in the Bay Area in the period of Jan 2015 - Feb 2020. Wow, that’s so much money!</p>
+									<p>Nearly 6.8 billion dollars was spent on buying a home in the Bay Area in the period of Jan 2015 - Feb 2020. Wow, that’s so much money!</p>
 								</li>
 								<li>
-									<h5>Who sold the most houses in a year?</h5>
-									<p>San Jose sold 749 houses in the year 2015.</p>
+									<h5>Who sold the most homes in a year?</h5>
+									<p>San Jose sold 749 homes in the year 2015.</p>
 								</li>
 								<li>
-									<h5>Who sole the least houses in a year?</h5>
-									<p>Ignored those who didn’t sell a house in a year, Calistoga only sold 2 houses in 2020 so far. Although 2020 is not past yet, it’s still not a good number, isn’t it?</p>
+									<h5>Who sole the least homes in a year?</h5>
+									<p>Ignored those who didn’t sell a home in a year, Calistoga only sold 2 homes in 2020 so far. Although 2020 is not past yet, it’s still not a good number, isn’t it?</p>
 								</li>
 								<li>
 									<h5>The most expensive city in the area from 2015 to 2020?</h5>
-									<p>Believe it or not, Atherton in 2020 has the highest average house price at 6.55M dollars.</p>
+									<p>Believe it or not, Atherton in 2020 has the highest average home price at 6.55M dollars.</p>
 								</li>
 								<li>
 									<h5>Last but not least, how many lines of JavaScript did I write for this project?</h5>

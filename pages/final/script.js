@@ -408,12 +408,12 @@ function draw() {
 
 			g.cities.selectAll("circle").on("mouseover", function(d) {
 				d3.select(this).raise();
-				d3.select(this).style("fill", colorSecondary);
+				d3.select(this).style("fill", colorMain);
 
 				d3.select("#bar-price-" + d.id)
-					.style("fill", colorSecondary);
+					.style("fill", colorMain);
 				d3.select("#bar-count-" + d.id)
-					.style("fill", colorSecondary);
+					.style("fill", colorMain);
 
 				showDetail(d);
 
@@ -437,6 +437,10 @@ function draw() {
 			});
 
 			g.cities.selectAll("circle").on("click", function(d) {
+				d3.select(this).raise();
+				g.cities.selectAll("circle").classed("active", false);
+				d3.select(this).classed("active", true);
+				
 				openPanelDetail(d.name);
 			});
 		}
@@ -471,7 +475,7 @@ function draw() {
 				.attr("transform", "translate(0,0)")
 				.attr("x", 15)
 				.attr("y", 30)
-				.text("Count of House Sales")
+				.text("Count of Home Sales")
 				.style("fill", "#000")
 				.attr("class", "legend-title")
 				.style("font-size", 12);
@@ -643,7 +647,7 @@ function draw() {
 				.attr("x", width)
 				.attr("text-anchor", "end")
 				.attr("stroke", "#2d3666")
-				.text("Average House Price");
+				.text("Average Home Price");
 
 			let yAxis = g.append("g")
 				.call(d3.axisLeft(yScale))
@@ -688,9 +692,10 @@ function draw() {
 				.style("cursor", "pointer");
 
 			bars.selectAll(".bar-price").on("mouseover", function(d) {
-				d3.select(this).style("fill", colorSecondary);
+				d3.select(this).style("fill", colorMain);
 
-				d3.select("#city-" + d.id).style("fill", colorSecondary);
+				d3.select("#city-" + d.id).raise();
+				d3.select("#city-" + d.id).style("fill", colorMain);
 
 				showDetail(d);
 			});
@@ -710,6 +715,10 @@ function draw() {
 			});
 
 			bars.selectAll(".bar-price").on("click", function(d) {
+				d3.select("#city-" + d.id).raise();
+				d3.selectAll("circle").classed("active", false);
+				d3.select("#city-" + d.id).classed("active", true);
+				
 				openPanelDetail(d.name);
 			});
 		}
@@ -764,7 +773,7 @@ function draw() {
 				.attr("x", width)
 				.attr("text-anchor", "end")
 				.attr("stroke", "#2d3666")
-				.text("Count of House Sales");
+				.text("Count of Home Sales");
 
 			let yAxis = g.append("g")
 				.call(d3.axisLeft(yScale))
@@ -808,9 +817,10 @@ function draw() {
 				.style("cursor", "pointer");
 
 			bars.selectAll(".bar-count").on("mouseover", function(d) {
-				d3.select(this).style("fill", colorSecondary);
+				d3.select(this).style("fill", colorMain);
 
-				d3.select("#city-" + d.id).style("fill", colorSecondary);
+				d3.select("#city-" + d.id).raise();
+				d3.select("#city-" + d.id).style("fill", colorMain);
 
 				showDetail(d);
 			});
@@ -829,6 +839,10 @@ function draw() {
 			});
 
 			bars.selectAll(".bar-count").on("click", function(d) {
+				d3.select("#city-" + d.id).raise();
+				d3.selectAll("circle").classed("active", false);
+				d3.select("#city-" + d.id).classed("active", true);
+				
 				openPanelDetail(d.name);
 			});
 
@@ -903,7 +917,7 @@ function draw() {
 				.attr("text-anchor", "end")
 				.attr("stroke", "#2d3666")
 				.attr("class", "label")
-				.text("Average House Price");
+				.text("Average Home Price");
 
 			g.append("path")
 				.datum(values) // 10. Binds data to the line 
@@ -984,7 +998,7 @@ function draw() {
 				.attr("text-anchor", "end")
 				.attr("stroke", "#2d3666")
 				.attr("class", "label")
-				.text("Count of House Sales");
+				.text("Count of Home Sales");
 
 			g.append("path")
 				.datum(values) // 10. Binds data to the line 
@@ -1065,7 +1079,7 @@ function draw() {
 			<td>${price}</td>
 			</tr>
 			<tr>
-			<th>2015 - 2020 Count of House Sales</th>
+			<th>2015 - 2020 Count of Home Sales</th>
 			<td>${count}</td>
 			</tr>
 			<tr>
@@ -1136,7 +1150,7 @@ function drawDetail(city) {
 			.attr("y", -40)
 			.attr("text-anchor", "end")
 			.attr("stroke", "#2d3666")
-			.text("Average House Price (2015-2020)");
+			.text("Average Home Price (2015-2020)");
 
 		// Create the bars' container
 		let bar = g.selectAll(".bar-price")
@@ -1192,7 +1206,7 @@ function drawDetail(city) {
 			.attr("y", -40)
 			.attr("text-anchor", "end")
 			.attr("stroke", "#2d3666")
-			.text("Count of House Sales (2015-2020)");
+			.text("Count of Home Sales (2015-2020)");
 
 		// Create the bars' container
 		let bar = g.selectAll(".bar-count")
@@ -1280,7 +1294,7 @@ function drawDetail(city) {
 			.attr("text-anchor", "end")
 			.attr("stroke", "#2d3666")
 			.attr("class", "label")
-			.text("Average House Price Trend");
+			.text("Average Home Price Trend");
 
 		g.append("path")
 			.datum(values) // 10. Binds data to the line 
@@ -1353,7 +1367,7 @@ function drawDetail(city) {
 			.attr("text-anchor", "end")
 			.attr("stroke", "#2d3666")
 			.attr("class", "label")
-			.text("Count of House Sales Trend");
+			.text("Count of Home Sales Trend");
 
 		g.append("path")
 			.datum(values) // 10. Binds data to the line 
@@ -1409,6 +1423,8 @@ function togglePanelModule() {
 
 function toggleDetailModule() {
 	d3.select("button#panel-close").on("click", function() {
+		d3.selectAll("circle").classed("active", false);
+		
 		cleanDetail();
 		closePanelDetail();
 	})

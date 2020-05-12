@@ -436,31 +436,31 @@
 						  	<!-- Begin page content -->
 						  	<div class="content">
 								<h2 class="section-title">Question</h2>
-								<h4>House Price</h4>
+								<h4>Home Price</h4>
 								<ul>
-									<h5>What cities in the bay area have the highest house price in Jan 2020?</h5>
-									<li>What is the trend of the house price of the bay area in the last 5 years?</li>
+									<h5>What cities in the bay area have the highest home price in Jan 2020?</h5>
+									<li>What is the trend of the home price of the bay area in the last 5 years?</li>
 								</ul>
-								<h4>Count of House Sales</h4>
+								<h4>Count of Home Sales</h4>
 								<ul>
-									<li>What is the count of house sales of all cities in the bay area?</li>
-									<li>What is the trend of the count of house sales of the bay area in the last 5 years?</li>
+									<li>What is the count of home sales of all cities in the bay area?</li>
+									<li>What is the trend of the count of home sales of the bay area in the last 5 years?</li>
 								</ul>
 								<hr class="space">
 								<h2 class="section-title">Answer</h2>
-								<h4>House Price</h4>
+								<h4>Home Price</h4>
 								<ul>
-									<li>According to the map, the south part of the bay area has a higher house price, following by the central part, while the north bay area has a lower house price.</li>
-									<li>According to the line chart, the average house price in the bay area kept growing and peaked at Jun 2018, but it started to drop in the following years.</li>
+									<li>According to the map, the south part of the bay area has a higher home price, following by the central part, while the north bay area has a lower home price.</li>
+									<li>According to the line chart, the average home price in the bay area kept growing and peaked at Jun 2018, but it started to drop in the following years.</li>
 								</ul>
-								<h4>Count of House Sales</h4>
+								<h4>Count of Home Sales</h4>
 								<p>No answer at the moment yet.</p>
 								<hr class="space">
 								<h2 class="section-title">Prototype 1</h2>
 								<h3 class="section-title top-space">Bar Chart: Average Price of Feb 2020 for each Region Name. The view is filtered on Region Name, which keeps 43 of 63 members.</h3>
 								<h4 class="section-title top-space">Encoding</h4>
 								<ul>
-									<li>X-Axis: Average house price in the month of Jan 2020</li>
+									<li>X-Axis: Average home price in the month of Jan 2020</li>
 									<li>Y-Axis: City names in the bay area</li>
 								</ul>
 								<h4 class="section-title top-space">Interactivity</h4>
@@ -489,7 +489,7 @@
 								<h4 class="section-title top-space">Encoding</h4>
 								<ul>
 									<li>X-Axis: Time period of each half year from Jan 2014 to Jan 2020</li>
-									<li>Y-Axis: The average house price of the whole bay area</li>
+									<li>Y-Axis: The average home price of the whole bay area</li>
 
 								</ul>
 								<h4 class="section-title top-space">Interactivity</h4>
@@ -514,8 +514,8 @@
 								<h4 class="section-title top-space">Encoding</h4>
 								<ul>
 									<li>Circle: Major cities in the bay area showed in the dataset</li>
-									<li>Color: Average house price in Jan 2020</li>
-									<li>Size: Currently also the average house price in Jan 2020, but will change to count of house sales in Jan 2020 in the implementation</li
+									<li>Color: Average home price in Jan 2020</li>
+									<li>Size: Currently also the average home price in Jan 2020, but will change to count of home sales in Jan 2020 in the implementation</li
 								</ul>
 								<h4 class="section-title top-space">Interactivity</h4>
 								<div class="row">
@@ -547,6 +547,213 @@
 								</div>
 					  		</div>
 						  <!-- End page content -->
+						</div>
+					</section>
+				
+					<section class="feedback">
+						<div class="container">
+							<hr class="space"/>
+							<h2 class="section-title">Feedback from Classmates</h2>
+							<div class="card">
+								<div class="post-container">
+									<div class="comments">
+										<div class="comment" style="border-top: 1px solid #eee;">
+											<div class="media align-items-top px-4 py-3">
+												<div class="post media-body ml-3 py-1">
+													<div class="title" >
+														<h6 class="mt-0 mb-0">Instructor</h6>
+													</div>
+													<div class="post py-2 text-secondary" style="max-width: 80%">
+														<ul>
+															<li>
+																<p>Alpha Release</p>
+																<ul>
+																	<li>
+																		<p>The dataset is a great choice, but it may need some work to wrangle the data for this project. Because the original data in Zillow doesn't have a sequential time period and geographic information for cities.</p>
+																	</li>
+																	<li>
+																		<p>For the final project, we are expecting a multi-components visualization, only a bar chart may not meet this requirement and not enough to get a good grade.</p>
+																	</li>
+																</ul>
+															</li>
+															<li>
+																<p>Beta Release</p>
+																<ul>
+																	<li>
+																		<p>A proportion map is a great choice for this topic, and the color for price and size for count make sense here.</p>
+																	</li>
+																	<li>
+																		<p>In the map prototype, there’s no way we can see the trend of price and count, it would be great if you can connect the line chart with the map. </p>
+																	</li>
+																	<li>
+																		<p>You can try to implement interactivity to the map or line chart, for example, it will be really cool if you can display the line chart when users hover on the map.</p>
+																	</li>
+																</ul>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comment" style="border-top: 1px solid #eee;">
+											<div class="media align-items-top px-4 py-3">
+												<div class="post media-body ml-3 py-1">
+													<div class="title" >
+														<h6 class="mt-0 mb-0">Alex Wang</h6>
+													</div>
+													<div class="post py-2 text-secondary" style="max-width: 80%">
+														<ul>
+															<li><p>Visual Encodings</p>
+																<p>On the symbol map visualization the size and color for major cities seems clear for readers to know immediately about the average house price</p>
+															</li>
+															<li><p>Non-Color Encodings</p>
+																<p>The average house price is used as quantitative variable, and it seems fine if the author wants to explore how does the price behave in different perspectives such as by time, by geographic or the ranking.</p>
+															</li>
+															<li><p>Color Encodings</p>
+																<p>It is nice that the red color is consistent among all the prototypes, but since on the map visualization, the extent of "how red it is" represents a data value, maybe in other graphs could use other colors?</p>
+															</li>
+															<li><p>Context</p>
+																<p>The context like tick labels and legends are really clear.</p>
+															</li>
+															<li><p>Lie Factor</p>
+																<p>No lie factor.</p>
+															</li>
+															<li><p>Data Ink Ratio</p>
+																<p>High data ink ratio.</p>
+															</li>
+															<li><p>Data Density</p>
+																<p>High data density.</p>
+															</li>
+															<li><p>Gestalt Principles</p>
+																<p>Gestalt principles used well.</p>
+															</li>
+															<li><p>Planned Interactivity</p>
+																<p>The on-demand detail tooltip makes it clear for readers.</p>
+															</li>
+															<li><p>Planned Interaction Effectiveness</p>
+																<p>Very Good.</p>
+															</li>
+															<li><p>Design and Aesthetics</p>
+																<p>Very Good.</p>
+															</li>
+															<li><p>Understanding</p>
+																<p>From the map visualization it seems that cities with relatively higher average house prices are closer to each other.</p>
+															</li>
+															<li><p>Visualization Goal</p>
+																<p>Very Good.</p>
+															</li>
+															<li><p>Visualization Effectiveness</p>
+																<p>Very Good.</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="comment" style="border-top: 1px solid #eee;">
+											<div class="media align-items-top px-4 py-3">
+												<div class="post media-body ml-3 py-1">
+													<div class="title" >
+														<h6 class="mt-0 mb-0">Enrique Bascur</h6>
+													</div>
+													<div class="post py-2 text-secondary" style="max-width: 80%">
+														<ul>
+															<li><p>Visual Encodings</p>
+																<p>prototype 1:</p>
+																<p>X-Axis: Average house price in the month of Jan 2020</p>
+																<p>Y-Axis: City names in the bay area</p>
+																<p>prototype2:</p>
+																<p>X-Axis: Time period of each half year from Jan 2014 to Jan 2020</p>
+																<p>Y-Axis: The average house price of the whole bay area</p>
+																<p>prototype3:</p>
+																<p>Circle: Major cities in the bay area showed in the dataset</p>
+																<p>Color: Average house price in Jan 2020</p>
+																<p>Size: Currently also the average house price in Jan 2020, but will change to count of house sales in Jan 2020 in the implementation</p>
+															</li>
+															<li><p>Non-Color Encodings</p>
+																<p>Everything looks good and organized, the only slight problem I saw was that in the first prototype the x-axis count should turn to millions at the end. 2600k seems a bit awkward.</p>
+															</li>
+															<li><p>Color Encodings</p>
+																<p>There's no excessive or unnecessary use of color</p>
+															</li>
+															<li><p>Context</p>
+																<p>It would be good if the title said 'average price of homes' but outside of that everything is easily understadable</p>
+															</li>
+															<li><p>Lie Factor</p>
+																<p>In general very good data.</p>
+																<p>The number scale on prototype 1 could be misleading, it's technically correct but could be better labeled.</p>
+																<p>The only other issue I have is what is considered the bay area. For example Vacaville is halfway to Sacramento from San Francisco.</p>
+															</li>
+															<li><p>Data Ink Ratio</p>
+																<p>For prototype 1 the data ink ratio is good. The bars fill in where they need to.</p>
+																<p>For prototype 2 it's fairly low. there is a single line on a mostly white chart.</p>
+															</li>
+															<li><p>Data Density</p>
+																<p>The data density is similar to the data ink ratio.</p>
+															</li>
+															<li><p>Gestalt Principles</p>
+																<p>Very good for prototype 1</p>
+																<p>Prototype 2 the line gets lost in all the white space.</p>
+															</li>
+															<li><p>Planned Interactivity</p>
+																<p>Prototype 1 has sorting for the bar chart</p>
+																<p>Prototype 2 has acircle on click that shows information on demando</p>
+																<p>Prototype 3 has zooming and a tooltip</p>
+															</li>
+															<li><p>Planned Interaction Effectiveness</p>
+																<p>It gives all the information needed.</p>
+															</li>
+															<li><p>Design and Aesthetics</p>
+																<p>The bar chart is good, lots of color and fills up the chart, easily readable.</p>
+																<p>The line chart could be better it seems a little too uncolorful. Maybe the gridline could e darker.</p>
+															</li>
+															<li><p>Understanding</p>
+																<p>Good visualizations easy to understand.</p>
+															</li>
+															<li><p>Visualization Goal</p>
+																<p>I can see the average cost per region for a home. Goal achieved.</p>
+															</li>
+															<li><p>Visualization Effectiveness</p>
+																<p>It achieves what you want.</p>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+						
+					<section>
+						<div class="container">
+							<hr class="space"/>
+							<h2 class="section-title">Adjustments Based on Feedback</h2>
+							<ul>
+								<li>
+									<p>Color</p>
+									<p>I think I already did a good job on the color, so I don't want to change the whole thing here. But I see that the bar is not so interesting with only one color, so I adjusted the bar's color to match the legend as well, which also means the count of home sales.</p>
+								</li>
+								<li>
+									<p>Title</p>
+									<p>I definitely agree that using “home” makes more sense than “house”, so I change the noun of the title with “home” over “house”.</p>
+								</li>
+								<li>
+									<p>Line Chart Space</p>
+									<p>I also noticed the problem that the line chart has too much white space on the bottom since it’s a line chart, we don’t necessarily need to start from 0, so in the final, I replace the 0 with the minimum to reduce the unused white space.</p>
+								</li>
+								<li>
+									<p>Implementation</p>
+									<p>A very important one, putting three separate graphs here seems very unnecessary and loose. Thanks to my professor’s advice, I changed my mind and implemented all three different types of graphs into one BIG graph, with the map as the main body and the rest as a sidebar. I also added some interactivities to make them connected, this is the biggest progress and now things work consistently.</p>
+								</li>
+								<li>
+									<p>Interactivity</p>
+									<p>I also agree that the map doesn’t provide information for the trend and the trend is a very important element that people want to see, especially in my major visualization. So the way that I figured out was also using a sidebar for the line chart, so people can see the map and the trend at the same time. In case to not squeeze with the bar, which takes a lot of space, I added a dropdown that allows users to choose which visualization to show.</p>
+									<p>Last but not least, I really love the idea that to interact with the map to show a trend or number about the specific city, so I added clicking interactivity on the circle, which will display a more detailed panel on the sidebar with almost all information I want for that clicked city.</p>
+								</li>
+							</ul>
 						</div>
 					</section>
 				</div>
